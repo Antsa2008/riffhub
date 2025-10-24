@@ -1,8 +1,8 @@
 const products = [
-  { id: 1, title: 'RiffFuzz Pro - fuzz pedaali', price: 129.0, img: 'https://via.placeholder.com/400x300?text=Fuzz' },
-  { id: 2, title: 'Vintage Strings 10-46', price: 9.9, img: 'https://via.placeholder.com/400x300?text=Strings' },
-  { id: 3, title: 'MiniAmp 20W', price: 249.0, img: 'https://via.placeholder.com/400x300?text=Amp' },
-  { id: 4, title: 'DelayEcho X', price: 179.0, img: 'https://via.placeholder.com/400x300?text=Delay' }
+  { id: 1, title: 'Focusrite Scarlett 2i2 4th Gen - audio interface', price: 209.0, img: 'focusrite.png' },
+  { id: 2, title: 'Master of Puppets - vinyyli levy', price: 39.99, img: 'mop.png' },
+  { id: 3, title: 'Harley benton Guitar set', price: 155.0, img: 'kitaraset.png' },
+  { id: 4, title: 'Audio-Technica AT-LP5X -levysoitin', price: 389.0, img: 'levysoitin.png' }
 ];
 
 const productGrid = document.getElementById('productGrid');

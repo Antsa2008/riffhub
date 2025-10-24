@@ -1,0 +1,30 @@
+body {
+    background-color: rgb(53, 53, 53);
+}
+
+
+.navbar {
+    background-color: rgb(156, 12, 41);
+}
+
+.navbar img{
+    width: 100px;
+}
+
+.navbar-brand{
+    color: aliceblue;
+}
+
+.col-lg-7 {
+    background-color: rgb(156, 12, 41);
+    color: aliceblue;
+}
+
+.col-lg-5 img {
+    width: 300px;
+    height: auto;
+}
+
+.hero {
+    padding: 10px;
+}
