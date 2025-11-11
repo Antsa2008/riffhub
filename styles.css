@@ -41,3 +41,12 @@ body {
   transform: scale(1.05);
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
+
+.tuotteet{
+    background-color: aliceblue;
+    padding: 100px;
+}
+
+.tuotteet button{
+    background-color:rgb(156, 12, 41);
+}
