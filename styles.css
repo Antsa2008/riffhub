@@ -54,7 +54,7 @@ body {
 
 .btn {
   display: inline-block;
-  background-color: #ff0000;
+  background-color: rgb(156, 12, 41);
   color: white;
   padding: 10px 20px;
   border-radius: 8px;
@@ -64,5 +64,14 @@ body {
 }
 
 .btn:hover {
-  background-color: #ff0000;
+  background-color: rgb(156, 12, 41);
+}
+
+.product1 img {
+    width: 1000px;
+    height: auto;
+}
+
+.product1 {
+    border: 100px;
 }
