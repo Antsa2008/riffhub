@@ -1,0 +1,13 @@
+button, .btn-secondary {
+  background-color: #ff0000;
+  color: rgb(0, 0, 0);
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button:hover, .btn-secondary:hover {
+  background-color: #ff0000;
+}
