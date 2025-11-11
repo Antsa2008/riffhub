@@ -1,8 +1,8 @@
 const products = [
-  { id: 1, title: 'Focusrite Scarlett 2i2 4th Gen - audio interface', price: 209.0, img: 'focusrite.png' },
-  { id: 2, title: 'Master of Puppets - vinyyli levy', price: 39.99, img: 'mop.png' },
-  { id: 3, title: 'Harley benton Guitar set', price: 155.0, img: 'kitaraset.png' },
-  { id: 4, title: 'Audio-Technica AT-LP5X -levysoitin', price: 389.0, img: 'levysoitin.png' }
+  { id: 1, title: 'Focusrite Scarlett 2i2 4th Gen - audio interface', price: 209.0, img: 'kuvat/focusrite.png' },
+  { id: 2, title: 'Master of Puppets - vinyyli levy', price: 39.99, img: 'kuvat/mop.png' },
+  { id: 3, title: 'Harley benton Guitar set', price: 155.0, img: 'kuvat/kitaraset.png' },
+  { id: 4, title: 'Audio-Technica AT-LP5X -levysoitin', price: 389.0, img: 'kuvat/levysoitin.png' }
 ];
 
 const productGrid = document.getElementById('productGrid');
