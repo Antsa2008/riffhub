@@ -2,6 +2,28 @@ body {
     background-color: rgb(53, 53, 53);
 }
 
+.btn-secondary{
+    display: inline-block;
+    background-color: rgb(156, 12, 41);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.ostoskori {
+    background-color: aliceblue;
+    margin: 50px;
+    padding: 20px;
+}
+
+.maksukohta {
+    background-color: aliceblue;
+    margin: 50px;
+    padding: 20px;
+}
 
 .navbar {
     background-color: rgb(156, 12, 41);
