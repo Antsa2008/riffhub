@@ -9,32 +9,39 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-      <nav class="navbar navbar-expand-lg navbar-light bg-rgb(156, 12, 41) shadow-sm">
-    <div class="container">
-      <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
-        <img src="kuvat/riffhub-high-resolution-logo.png" alt="RiffHub" class="me-2 rounded-circle">
-        RiffHub
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navMain">
-        <form class="d-flex ms-auto me-3" role="search" onsubmit="return false;">
-          <input id="searchInput" class="form-control me-2" type="search" placeholder="Etsi tuotteita" aria-label="Haku">
-        </form>
-        <ul class="navbar-nav align-items-lg-center">
-          <li class="nav-item me-2"><a class="nav-link" href="#">Kategoriat</a></li>
-          <li class="nav-item me-2"><a class="nav-link" href="#">Tarjoukset</a></li>
-          <li class="nav-item">
-            <button id="cartBtn" class="btn btn-outline-rgb(53, 53, 53) position-relative">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16"><path d="M0 1.5A.5.5 0 0 1 .5 1h1a.5.5 0 0 1 .485.379L2.89 5H14.5a.5.5 0 0 1 .49.598l-1.5 6A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.485-.621L4.01 7H2.89L2.11 3H.5a.5.5 0 0 1-.5-.5z"/></svg>
-              <span id="cartCount" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
-            </button>
-          </li>
-        </ul>
-      </div>
+<!--Nav bar-->
+<nav class="navbar navbar-expand-lg navbar-light bg-rgb(156, 12, 41) shadow-sm">
+  <div class="container">
+
+    <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
+      <img src="kuvat/riffhub-high-resolution-logo.png" alt="RiffHub" class="me-2 rounded-circle">
+      RiffHub
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMain">
+      <form class="d-flex ms-auto me-3" role="search" onsubmit="return false;">
+        <input id="searchInput" class="form-control me-2" type="search" placeholder="Etsi tuotteita" aria-label="Haku">
+      </form>
+
+      <ul class="navbar-nav align-items-lg-center">
+        <li class="nav-item me-2"><a class="nav-link" href="#">Kategoriat</a></li>
+        <li class="nav-item me-2"><a class="nav-link" href="#">Tarjoukset</a></li>
+        <li class="nav-item">
+          <button id="cartBtn" class="btn btn-outline-rgb(53, 53, 53) position-relative">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+              <path d="M0 1.5A.5.5 0 0 1 .5 1h1a.5.5 0 0 1 .485.379L2.89 5H14.5a.5.5 0 0 1 .49.598l-1.5 6A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.485-.621L4.01 7H2.89L2.11 3H.5a.5.5 0 0 1-.5-.5z"/>
+            </svg>
+            <span id="cartCount" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+          </button>
+        </li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
 
 <a href="index.html" class="btn">Palaa etusivulle</a>
 
