@@ -1,8 +1,8 @@
 const products = [
-  { id: 1, name: "Gibson Les Paul", price: 1499.90, img: "kuvat/lespaul.png" },
-  { id: 2, name: "Ernie Ball Slinky kielet", price: 9.90, img: "kuvat/ernieball.png" },
-  { id: 3, name: "Fender Mustang LT25", price: 229.00, img: "kuvat/fender_mustang_LT25.png" },
-  { id: 4, name: "Metallica T-paita", price: 29.90, img: "kuvat/L_justice.png" },
+  { id: 1, name: "FOCUSRITE SCARLETT 2i2 4TH GEN äänikortti", price: 139.00, img: "kuvat/focusrite.png" },
+  { id: 2, name: "Master of puppets - vinyylilevy", price: 9.90, img: "kuvat/mop.png" },
+  { id: 3, name: "Harley benton - kitara setti", price: 229.00, img: "kuvat/kitaraset.png" },
+  { id: 4, name: "vinyylilevysoitin", price: 29.90, img: "kuvat/levysoitin.png" },
 ];
 
 // ====== DOM-elementit ======
