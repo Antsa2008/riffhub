@@ -2,6 +2,10 @@ body {
     background-color: rgb(53, 53, 53);
 }
 
+h1  {
+    color: aliceblue;
+}
+
 .btn-secondary{
     display: inline-block;
     background-color: rgb(156, 12, 41);
@@ -97,3 +101,4 @@ body {
 .product1 {
     border: 100px;
 }
+

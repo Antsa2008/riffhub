@@ -1,10 +1,8 @@
-    const tuotteet = [
-      { id: 1, name: "Epiphone Les Paul Custom EB", price: 766.00, img: "kuvat/lespaul2.png" },
-      { id: 2, name: "Jackson JS32 King V BLK AH", price: 499.00, img: "kuvat/jackson_JS32_kingv.png" },
-      { id: 3, name: "Ltd KH-202", price: 399.00, img: "kuvat/kh_202.png" },
-      { id: 4, name: "Fender Player II", price: 499.00, img: "kuvat/fender_plyer_II.png" },
-      { id: 5, name: "Ltd Snakebyte JH", price: 1499.00, img: "kuvat/fender_plyer_II.png" },
-      { id: 6, name: "Kramer Guitars Dave Mustaine Vanguard SM", price: 815.00, img: "kuvat/kramer_DM.png"},
+const tuotteet = [
+      { id: 11, name: "Funko Pop! - Lady Justice", price: 18.00, img: "kuvat/L_justice.png" },
+      { id: 12, name: "Funko Pop! - Vic Rattlehead", price: 18.00, img: "kuvat/rattlehead.png" },
+      { id: 13, name: "Funko Pop! - Eddie (The trooper)", price: 23.00, img: "kuvat/ironmaiden_pop.png" },
+      { id: 14, name: "Funko Pop! Deluxe Moment: Metallica Master of Puppets Tour (1986)", price: 180.00, img: "kuvat/metallica_funko.png" },
     ];
 
 

@@ -1,10 +1,8 @@
-    const tuotteet = [
-      { id: 1, name: "Epiphone Les Paul Custom EB", price: 766.00, img: "kuvat/lespaul2.png" },
-      { id: 2, name: "Jackson JS32 King V BLK AH", price: 499.00, img: "kuvat/jackson_JS32_kingv.png" },
-      { id: 3, name: "Ltd KH-202", price: 399.00, img: "kuvat/kh_202.png" },
-      { id: 4, name: "Fender Player II", price: 499.00, img: "kuvat/fender_plyer_II.png" },
-      { id: 5, name: "Ltd Snakebyte JH", price: 1499.00, img: "kuvat/fender_plyer_II.png" },
-      { id: 6, name: "Kramer Guitars Dave Mustaine Vanguard SM", price: 815.00, img: "kuvat/kramer_DM.png"},
+const tuotteet = [
+      { id: 15, name: "Fender Mustang LT25", price: 11.00, img: "kuvat/fender_mustang_LT25.png" },
+      { id: 16, name: "Marshall JVM410H", price: 11.00, img: "kuvat/Marshall_JVM410.png" },
+      { id: 17, name: "Marshall 1960AV 412 Cabinet", price: 11.00, img: "kuvat/Marshall_1960AV.png" },
+      { id: 18, name: "Mooer Hornet 30 Watt Black Amplifier", price: 11.00, img: "kuvat/Hornet.png" },
     ];
 
 

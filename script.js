@@ -1,8 +1,8 @@
 const products = [
-  { id: 1, name: "FOCUSRITE SCARLETT 2i2 4TH GEN äänikortti", price: 139.00, img: "kuvat/focusrite.png" },
-  { id: 2, name: "Master of puppets - vinyylilevy", price: 29.90, img: "kuvat/mop.png" },
-  { id: 3, name: "Harley benton - kitara setti", price: 150.00, img: "kuvat/kitaraset.png" },
-  { id: 4, name: "vinyylilevysoitin", price: 269.90, img: "kuvat/levysoitin.png" },
+  { id: 7, name: "FOCUSRITE SCARLETT 2i2 4TH GEN äänikortti", price: 139.00, img: "kuvat/focusrite.png" },
+  { id: 8, name: "Master of puppets - vinyylilevy", price: 29.90, img: "kuvat/mop.png" },
+  { id: 9, name: "Harley benton - kitara setti", price: 150.00, img: "kuvat/kitaraset.png" },
+  { id: 10, name: "vinyylilevysoitin", price: 269.90, img: "kuvat/levysoitin.png" },
 ];
 
 // ====== DOM-elementit ======

@@ -1,10 +1,8 @@
-    const tuotteet = [
-      { id: 1, name: "Epiphone Les Paul Custom EB", price: 766.00, img: "kuvat/lespaul2.png" },
-      { id: 2, name: "Jackson JS32 King V BLK AH", price: 499.00, img: "kuvat/jackson_JS32_kingv.png" },
-      { id: 3, name: "Ltd KH-202", price: 399.00, img: "kuvat/kh_202.png" },
-      { id: 4, name: "Fender Player II", price: 499.00, img: "kuvat/fender_plyer_II.png" },
-      { id: 5, name: "Ltd Snakebyte JH", price: 1499.00, img: "kuvat/fender_plyer_II.png" },
-      { id: 6, name: "Kramer Guitars Dave Mustaine Vanguard SM", price: 815.00, img: "kuvat/kramer_DM.png"},
+const tuotteet = [
+      { id: 11, name: "Ernie Ball - Regular Slinky", price: 11.00, img: "kuvat/ernieball.png" },
+      { id: 12, name: "Ernie Ball - Super Slinky", price: 11.00, img: "kuvat/ernieball_SS.png" },
+      { id: 13, name: "Ernie Ball - Power Slinky", price: 11.00, img: "kuvat/ernieball_PS.png" },
+      { id: 14, name: "Ernie Ball - Mighty Slinky", price: 11.00, img: "kuvat/ernieball_MS.png" },
     ];
 
 
