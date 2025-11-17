@@ -6,6 +6,10 @@ h1  {
     color: aliceblue;
 }
 
+.h2 {
+    color: aliceblue;
+}
+
 .btn-secondary{
     display: inline-block;
     background-color: rgb(156, 12, 41);
