@@ -1,17 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RiffHub — soittimet, levyt sekä fani- ja oheistuotteet</title>
 
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="side.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
 <!--Nav bar-->
 <nav class="navbar navbar-expand-lg navbar-light bg-rgb(156, 12, 41) shadow-sm">
   <div class="container">
+
+    <!-- SIVUPALKIN NAPPI -->
+    <button class="btn btn-dark me-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#sideMenu">
+      ☰
+    </button>
 
     <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
       <img src="kuvat/riffhub-high-resolution-logo.png" alt="RiffHub" class="me-2 rounded-circle">
@@ -28,8 +35,6 @@
       </form>
 
       <ul class="navbar-nav align-items-lg-center">
-        <li class="nav-item me-2"><a class="nav-link" href="#">Kategoriat</a></li>
-        <li class="nav-item me-2"><a class="nav-link" href="#">Tarjoukset</a></li>
         <li class="nav-item">
           <button id="cartBtn" class="btn btn-outline-rgb(53, 53, 53) position-relative">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
@@ -39,9 +44,38 @@
           </button>
         </li>
       </ul>
+
     </div>
   </div>
 </nav>
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="sideMenu">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title">Valikko</h5>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+  </div>
+
+  <div class="offcanvas-body">
+
+    <h6 class="text-muted">Kategoriat</h6>
+    <ul class="list-unstyled">
+      <li><a href="kitarat.html" class="d-block py-2">🎸 Kitarat</a></li>
+      <li><a href="kielet_ja_tarvikkeet.html" class="d-block py-2">🧵 Kielet & Tarvikkeet</a></li>
+      <li><a href="vahvistimet_ja_aanentoistolaitteet.html" class="d-block py-2">🔊 Vahvistimet</a></li>
+      <li><a href="fanituotteet.html" class="d-block py-2">⭐ Fanituotteet</a></li>
+    </ul>
+
+    <hr class="bg-light">
+
+    <h6 class="text-muted">Tilisi & Tuki</h6>
+    <ul class="list-unstyled">
+      <li><a href="cart.html" class="d-block py-2">🛒 Ostoskori</a></li>
+      <li><a href="#" class="d-block py-2">📦 Toimitustiedot</a></li>
+      <li><a href="#" class="d-block py-2">📞 Asiakaspalvelu</a></li>
+    </ul>
+
+  </div>
+</div>
 
 <main class="container my-5">
     <h1 class="mb-4 text-center">Tuotteet</h1>

@@ -1,0 +1,39 @@
+/* Sivupalkki (offcanvas) tumma teema */
+.offcanvas {
+  background-color: #1b1b1b !important;
+  color: white;
+  transition: transform 0.35s ease-in-out, opacity 0.25s ease-in-out;
+}
+
+/* Pehmeä fade avautuessa */
+.offcanvas.show {
+  opacity: 1;
+}
+.offcanvas:not(.show) {
+  opacity: 0;
+}
+
+/* Linkkianimaatiot */
+.offcanvas a {
+  color: #f8f9fa;
+  font-size: 1rem;
+  transition: padding-left 0.2s ease, color 0.2s ease;
+}
+
+.offcanvas a:hover {
+  padding-left: 6px;
+  color: #ff4d4d;
+}
+
+/* Profiilinappi hover-efekti */
+#userBtn img {
+  transition: transform 0.2s ease;
+}
+#userBtn:hover img {
+  transform: scale(1.15);
+}
+
+/* Jakoviiva */
+.offcanvas hr {
+  border-color: rgba(255,255,255,0.2);
+}
