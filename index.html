@@ -45,6 +45,12 @@
         </li>
       </ul>
 
+<li class="nav-item ms-3">
+  <button id="userBtn" class="btn btn-outline-dark rounded-circle p-2">
+    <img src="kuvat/user-icon.png" width="20" height="20">
+  </button>
+</li>
+
     </div>
   </div>
 </nav>
@@ -184,6 +190,44 @@
         <button class="btn btn-secondary" data-bs-dismiss="modal">Jatka ostoksia</button>
         <!-- Tämä linkki vie käyttäjän ostoskori-sivulle -->
         <a href="cart.html" class="btn btn-primary">Siirry kassalle</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ========================================================= -->
+<!-- KIRJAUTUMISMODAALI -->
+<!-- ========================================================= -->
+
+<div class="modal fade" id="loginModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5>Kirjaudu sisään</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+
+        <!-- Kirjautumislomake -->
+        <form id="loginForm">
+          <label class="form-label">Käyttäjänimi</label>
+          <input type="text" id="usernameInput" class="form-control mb-3">
+
+          <label class="form-label">Salasana</label>
+          <input type="password" id="passwordInput" class="form-control mb-3">
+
+          <button type="submit" class="btn btn-primary w-100">Kirjaudu</button>
+        </form>
+
+        <!-- Uloskirjautuminen -->
+        <div id="logoutSection" class="d-none mt-3">
+          <p>Kirjautunut: <strong id="loggedUser"></strong></p>
+          <button id="logoutBtn" class="btn btn-danger w-100">Kirjaudu ulos</button>
+        </div>
+
       </div>
 
     </div>
