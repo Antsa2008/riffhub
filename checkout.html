@@ -51,26 +51,17 @@
   <form action="send_confirmation.php" method="post">
     <input type="text" name="customer_name" placeholder="Nimi" required>
     <input type="email" name="customer_email" placeholder="Sähköposti" required>
-
     <input type="text" name="customer_city" placeholder="Paikkakunta" required>
 
-    <hr>
+    <h3>Maksutiedot (DEMO)</h3>
+    <input type="text" name="card_holder" placeholder="Kortinhaltija (demo)" required>
+    <input type="text" name="card_number" placeholder="Kortin numero (DEMO)" maxlength="16" required>
+    <input type="text" name="card_exp" placeholder="Voimassaolo (MM/YY)" maxlength="5" required>
+    <input type="text" name="card_cvc" placeholder="CVC (DEMO)" maxlength="3" required>
 
-    <h3>Maksutiedot (Demo)</h3>
-
-    <input type="text" name="card_holder" placeholder="Kortinhaltijan nimi (demo)" required>
-
-    <input type="text" name="card_number" placeholder="Kortin numero (DEMO: 1234 5678 9012 3456)" 
-           maxlength="16" required>
-
-    <input type="text" name="card_exp" placeholder="Voimassaolo (MM/YY, DEMO)" 
-           maxlength="5" required>
-
-    <input type="text" name="card_cvc" placeholder="CVC (DEMO)" 
-           maxlength="3" required>
-
-    <button type="submit">Lähetä</button>
+    <button type="submit">Siirry maksamaan</button>
 </form>
+
 
 
 
