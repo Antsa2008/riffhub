@@ -1,10 +1,16 @@
 <?php
-// Varmistetaan että POST-dataa saatiin
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+// Composer autoload
+require __DIR__ . '/vendor/autoload.php';
+
+// Varmistetaan että POST-data saatiin
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     die("Ei suoraa pääsyä.");
 }
 
-// Haetaan ja suojataan lomakkeen kentät
+// Haetaan lomakkeen kentät
 $customer_name  = htmlspecialchars($_POST['customer_name']);
 $customer_email = htmlspecialchars($_POST['customer_email']);
 $customer_city  = htmlspecialchars($_POST['customer_city']);
@@ -14,47 +20,78 @@ $card_number = htmlspecialchars($_POST['card_number']);
 $card_exp    = htmlspecialchars($_POST['card_exp']);
 $card_cvc    = htmlspecialchars($_POST['card_cvc']);
 
-// ============================
-//  SÄHKÖPOSTIN LÄHETYS
-// ============================
+// =============================
+// SÄHKÖPOSTIN LÄHETYS (PHPMailer + Gmail)
+// =============================
 
-$to = $customer_email;   // Vastaanottaja (asiakas)
-$subject = "Tilausvahvistus – Kiitos tilauksestasi!";
+$mail = new PHPMailer(true);
 
-// Luodaan sähköpostin sisältö
-$message = "
-Hei $customer_name,
+try {
+    // Gmail SMTP asetukset
+    $mail->isSMTP();
+    $mail->Host = 'smtp.gmail.com';
+    $mail->SMTPAuth = true;
 
+    // *** VAIHDA TÄHÄN OMA GMAIL-OSOITE ***
+    $mail->Username = 'OMA_GMAIL_OSOITE@gmail.com';
+
+    // *** VAIHDA TÄHÄN GMAIL-SOVELLUSSALASANA ***
+    $mail->Password = 'GMAIL_APPS_PASSWORD';
+
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+    $mail->Port = 587;
+
+    // Lahettäjä
+    $mail->setFrom('OMA_GMAIL_OSOITE@gmail.com', 'Verkkokauppa Demo');
+
+    // Vastaanottaja (asiakas)
+    $mail->addAddress($customer_email, $customer_name);
+
+    // Aihe
+    $mail->Subject = "Tilausvahvistus – Kiitos tilauksestasi!";
+
+    // Viesti (HTML)
+    $mail->isHTML(true);
+    $mail->Body = "
+    <h2>Kiitos tilauksestasi!</h2>
+    <p><strong>Nimi:</strong> $customer_name<br>
+    <strong>Sähköposti:</strong> $customer_email<br>
+    <strong>Paikkakunta:</strong> $customer_city</p>
+
+    <h3>Maksutiedot (DEMO)</h3>
+    <p><strong>Kortinhaltija:</strong> $card_holder<br>
+    <strong>Kortin numero:</strong> $card_number<br>
+    <strong>Voimassaolo:</strong> $card_exp<br>
+    <strong>CVC:</strong> $card_cvc</p>
+
+    <p style='color:gray;'>Tämä on harjoitusprojektin automaattinen viesti.</p>
+    ";
+
+    // Tekstiversio
+    $mail->AltBody = "
 Kiitos tilauksestasi!
 
-Tilaustiedot:
--------------------------------------
 Nimi: $customer_name
 Sähköposti: $customer_email
 Paikkakunta: $customer_city
 
-Maksutiedot (Demo):
+Maksutiedot (DEMO)
 Kortinhaltija: $card_holder
 Kortin numero: $card_number
 Voimassaolo: $card_exp
 CVC: $card_cvc
--------------------------------------
+    ";
 
-Tämä on harjoitusprojektin sähköposti, ei oikea maksu.
+    // Lähetä
+    $mail->send();
+    $mail_sent = true;
 
-Ystävällisin terveisin,
-Verkkokauppa Demo
-";
-
-// Otsikot
-$headers = "From: Verkkokauppa Demo <no-reply@demokauppa.fi>\r\n";
-$headers .= "Reply-To: no-reply@demokauppa.fi\r\n";
-$headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
-
-// Lähetetään sähköposti
-$mail_sent = mail($to, $subject, $message, $headers);
-
+} catch (Exception $e) {
+    $mail_sent = false;
+    $error_message = $mail->ErrorInfo;
+}
 ?>
+
 <!DOCTYPE html>
 <html lang="fi">
 <head>
@@ -74,9 +111,6 @@ $mail_sent = mail($to, $subject, $message, $headers);
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
-        h2 { text-align: center; }
-        .row { margin-bottom: 10px; }
-        .label { font-weight: bold; }
         .success { color: green; font-weight: bold; }
         .error { color: red; font-weight: bold; }
     </style>
@@ -87,26 +121,20 @@ $mail_sent = mail($to, $subject, $message, $headers);
     <h2>Tilaus vastaanotettu</h2>
 
     <?php if ($mail_sent): ?>
-        <p class="success">Sähköpostivahvistus lähetettiin onnistuneesti!</p>
+        <p class="success">Sähköposti lähetettiin onnistuneesti! ✔</p>
     <?php else: ?>
-        <p class="error">Sähköpostin lähetys epäonnistui.</p>
+        <p class="error">Sähköpostin lähetys epäonnistui.<br><?= $error_message ?></p>
     <?php endif; ?>
 
-    <div class="row"><span class="label">Nimi:</span> <?= $customer_name ?></div>
-    <div class="row"><span class="label">Sähköposti:</span> <?= $customer_email ?></div>
-    <div class="row"><span class="label">Paikkakunta:</span> <?= $customer_city ?></div>
+    <p><strong>Nimi:</strong> <?= $customer_name ?></p>
+    <p><strong>Sähköposti:</strong> <?= $customer_email ?></p>
+    <p><strong>Paikkakunta:</strong> <?= $customer_city ?></p>
 
-    <hr>
-
-    <h3>Maksutiedot (DEMO)</h3>
-
-    <div class="row"><span class="label">Kortinhaltija:</span> <?= $card_holder ?></div>
-    <div class="row"><span class="label">Kortin numero:</span> <?= $card_number ?></div>
-    <div class="row"><span class="label">Voimassaolo:</span> <?= $card_exp ?></div>
-    <div class="row"><span class="label">CVC:</span> <?= $card_cvc ?></div>
-
-    <hr>
-    <p style="text-align:center;">(Tämä on vain esimerkkiprojekti — sähköpostit eivät ole oikeita maksuja.)</p>
+    <h3>Maksutiedot (Demo)</h3>
+    <p><strong>Kortinhaltija:</strong> <?= $card_holder ?></p>
+    <p><strong>Kortin numero:</strong> <?= $card_number ?></p>
+    <p><strong>Voimassaolo:</strong> <?= $card_exp ?></p>
+    <p><strong>CVC:</strong> <?= $card_cvc ?></p>
 </div>
 
 </body>
