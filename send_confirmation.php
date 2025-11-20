@@ -1,16 +1,17 @@
 <?php
-// PHPMailer
+// PHPMailer-namespacet
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require __DIR__ . '/vendor/autoload.php'; // Composer autoload
+// Ladataan Composerin autoload
+require __DIR__ . '/vendor/autoload.php';
 
-// Tarkistetaan, että lomake lähetettiin
+// Varmistetaan, että lomake lähetettiin POSTilla
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     die("Ei suoraa pääsyä.");
 }
 
-// Haetaan lomaketiedot
+// Lomaketiedot
 $customer_name  = htmlspecialchars($_POST['customer_name']);
 $customer_email = htmlspecialchars($_POST['customer_email']); // käyttäjän sähköposti
 $customer_city  = htmlspecialchars($_POST['customer_city']);
@@ -29,8 +30,8 @@ try {
     $mail->SMTPAuth   = true;
 
     // Oma Gmail-tili (lähettäjä)
-    $mail->Username   = 'riffhub@gmail.com';
-    $mail->Password   = 'SOVELLUSSALASANA';
+    $mail->Username   = 'riffhub@gmail.com'; // MUUTA TÄHÄN
+    $mail->Password   = 'SOVELLUSSALASANA';            // Gmail App Password
 
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port       = 587;
@@ -43,7 +44,6 @@ try {
     $mail->Subject = 'Tilausvahvistus – Kiitos tilauksestasi!';
     $mail->isHTML(true);
 
-    // Viesti (HTML)
     $mail->Body = "
     <h2>Kiitos tilauksestasi!</h2>
     <p><strong>Nimi:</strong> $customer_name<br>
@@ -59,7 +59,6 @@ try {
     <p style='color:gray;'>Tämä on harjoitusprojektin automaattinen viesti.</p>
     ";
 
-    // Tekstiversio
     $mail->AltBody = "
 Kiitos tilauksestasi!
 
@@ -90,22 +89,22 @@ CVC: $card_cvc
     <title>Tilaus vastaanotettu</title>
 </head>
 <body>
-    <h2>Tilaus vastaanotettu</h2>
+<h2>Tilaus vastaanotettu</h2>
 
-    <?php if ($mail_sent): ?>
-        <p style="color:green;">Sähköposti lähetettiin onnistuneesti käyttäjän antamaan osoitteeseen!</p>
-    <?php else: ?>
-        <p style="color:red;">Sähköpostin lähetys epäonnistui: <?= $error_message ?></p>
-    <?php endif; ?>
+<?php if ($mail_sent): ?>
+    <p style="color:green;">Sähköposti lähetettiin onnistuneesti käyttäjän antamaan osoitteeseen!</p>
+<?php else: ?>
+    <p style="color:red;">Sähköpostin lähetys epäonnistui: <?= $error_message ?></p>
+<?php endif; ?>
 
-    <p><strong>Nimi:</strong> <?= $customer_name ?></p>
-    <p><strong>Sähköposti:</strong> <?= $customer_email ?></p>
-    <p><strong>Paikkakunta:</strong> <?= $customer_city ?></p>
+<p><strong>Nimi:</strong> <?= $customer_name ?></p>
+<p><strong>Sähköposti:</strong> <?= $customer_email ?></p>
+<p><strong>Paikkakunta:</strong> <?= $customer_city ?></p>
 
-    <h3>Maksutiedot (Demo)</h3>
-    <p><strong>Kortinhaltija:</strong> <?= $card_holder ?></p>
-    <p><strong>Kortin numero:</strong> <?= $card_number ?></p>
-    <p><strong>Voimassaolo:</strong> <?= $card_exp ?></p>
-    <p><strong>CVC:</strong> <?= $card_cvc ?></p>
+<h3>Maksutiedot (Demo)</h3>
+<p><strong>Kortinhaltija:</strong> <?= $card_holder ?></p>
+<p><strong>Kortin numero:</strong> <?= $card_number ?></p>
+<p><strong>Voimassaolo:</strong> <?= $card_exp ?></p>
+<p><strong>CVC:</strong> <?= $card_cvc ?></p>
 </body>
 </html>

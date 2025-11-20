@@ -1,7 +1,0 @@
-{
-  "name": "demo/verkkokauppa",
-  "description": "Verkkokauppa demo PHPMailerilla",
-  "require": {
-    "phpmailer/phpmailer": "^6.8"
-  }
-}
