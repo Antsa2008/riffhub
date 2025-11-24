@@ -3,7 +3,7 @@
       { id: 2, name: "Jackson JS32 King V BLK AH", price: 499.00, img: "kuvat/jackson_JS32_kingv.png" },
       { id: 3, name: "Ltd KH-202", price: 399.00, img: "kuvat/kh_202.png" },
       { id: 4, name: "Fender Player II", price: 499.00, img: "kuvat/fender_plyer_II.png" },
-      { id: 5, name: "Ltd Snakebyte JH", price: 1499.00, img: "kuvat/fender_plyer_II.png" },
+      { id: 5, name: "Ltd Snakebyte JH", price: 1499.00, img: "kuvat/Snakebyte.png" },
       { id: 6, name: "Kramer Guitars Dave Mustaine Vanguard SM", price: 815.00, img: "kuvat/kramer_DM.png"},
     ];
 
