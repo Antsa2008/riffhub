@@ -100,60 +100,139 @@ function removeFromCart(index) {
 }
 
 /* ==========================================================
-   KIRJAUTUMINEN (LocalStorage)
+   KIRJAUTUMINEN JA REKISTERÖINTI (LocalStorage)
    ========================================================== */
 
 const userBtn = document.getElementById("userBtn");
 const loginModal = new bootstrap.Modal(document.getElementById("loginModal"));
 
+// Login
 const loginForm = document.getElementById("loginForm");
 const usernameInput = document.getElementById("usernameInput");
 const passwordInput = document.getElementById("passwordInput");
 
+// Register
+const registerForm = document.getElementById("registerForm");
+const regUsernameInput = document.getElementById("regUsernameInput");
+const regPasswordInput = document.getElementById("regPasswordInput");
+
+// Toggle link
+const toggleAuthLink = document.getElementById("toggleAuth");
+const modalTitle = document.getElementById("modalTitle");
+
+// Logout
 const logoutSection = document.getElementById("logoutSection");
 const loggedUserElement = document.getElementById("loggedUser");
 const logoutBtn = document.getElementById("logoutBtn");
 
+// Haetaan kirjautunut käyttäjä
 let loggedUser = localStorage.getItem("loggedUser");
 
+// Avaa modaalin
 userBtn.addEventListener("click", () => {
-  updateLoginModal();
+  updateAuthModal();
   loginModal.show();
 });
 
-function updateLoginModal() {
+// Päivitä modaalin näkymä kirjautuneen tilan mukaan
+function updateAuthModal() {
   if (loggedUser) {
     loginForm.classList.add("d-none");
+    registerForm.classList.add("d-none");
     logoutSection.classList.remove("d-none");
+    toggleAuthLink.classList.add("d-none");
+    modalTitle.textContent = "Tervetuloa";
     loggedUserElement.textContent = loggedUser;
   } else {
     loginForm.classList.remove("d-none");
+    registerForm.classList.add("d-none");
     logoutSection.classList.add("d-none");
+    toggleAuthLink.classList.remove("d-none");
+    modalTitle.textContent = "Kirjaudu sisään";
   }
 }
 
-loginForm.addEventListener("submit", e => {
+// Vaihda login <-> register
+toggleAuthLink.addEventListener("click", (e) => {
   e.preventDefault();
-  const name = usernameInput.value.trim();
-  if (name.length < 3) { alert("Käyttäjänimi liian lyhyt."); return; }
+  if (loginForm.classList.contains("d-none")) {
+    loginForm.classList.remove("d-none");
+    registerForm.classList.add("d-none");
+    modalTitle.textContent = "Kirjaudu sisään";
+    toggleAuthLink.textContent = "Ei tiliä? Rekisteröidy";
+  } else {
+    loginForm.classList.add("d-none");
+    registerForm.classList.remove("d-none");
+    modalTitle.textContent = "Rekisteröidy";
+    toggleAuthLink.textContent = "Onko sinulla jo tili? Kirjaudu";
+  }
+});
 
-  loggedUser = name;
-  localStorage.setItem("loggedUser", name);
+// Rekisteröinti
+registerForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const username = regUsernameInput.value.trim();
+  const password = regPasswordInput.value.trim();
+
+  if (username.length < 3 || password.length < 3) {
+    alert("Käyttäjänimi ja salasana vähintään 3 merkkiä");
+    return;
+  }
+
+  // Hae käyttäjät LocalStoragesta
+  let users = JSON.parse(localStorage.getItem("users")) || [];
+
+  if (users.find(u => u.username === username)) {
+    alert("Käyttäjänimi on jo käytössä.");
+    return;
+  }
+
+  // Lisää uusi käyttäjä
+  users.push({ username, password });
+  localStorage.setItem("users", JSON.stringify(users));
+
+  alert("Rekisteröinti onnistui! Kirjaudu sisään.");
+  toggleAuthLink.click(); // vaihda login-näkymään
+  regUsernameInput.value = "";
+  regPasswordInput.value = "";
+});
+
+// Kirjautuminen
+loginForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const username = usernameInput.value.trim();
+  const password = passwordInput.value.trim();
+
+  let users = JSON.parse(localStorage.getItem("users")) || [];
+  const user = users.find(u => u.username === username && u.password === password);
+
+  if (!user) {
+    alert("Virheellinen käyttäjänimi tai salasana.");
+    return;
+  }
+
+  loggedUser = username;
+  localStorage.setItem("loggedUser", loggedUser);
 
   usernameInput.value = "";
   passwordInput.value = "";
-  updateLoginModal();
+  updateAuthModal();
+  loginModal.hide();
 });
 
+// Uloskirjautuminen
 logoutBtn.addEventListener("click", () => {
   localStorage.removeItem("loggedUser");
   loggedUser = null;
-  updateLoginModal();
+  updateAuthModal();
 });
+
+// Alussa päivitä modaalin tila
+updateAuthModal();
 
 /* ==========================================================
    ALKUKUTSU
    ========================================================== */
 renderProducts();
 updateCartCount();
-updateLoginModal();
+updateAuthModal();

@@ -197,7 +197,7 @@
 </div>
 
 <!-- ========================================================= -->
-<!-- KIRJAUTUMISMODAALI -->
+<!-- KIRJAUTUMIS/REKISTERÖINTIMODAALI -->
 <!-- ========================================================= -->
 
 <div class="modal fade" id="loginModal" tabindex="-1">
@@ -205,7 +205,7 @@
     <div class="modal-content">
 
       <div class="modal-header">
-        <h5>Kirjaudu sisään</h5>
+        <h5 id="modalTitle">Kirjaudu sisään</h5>
         <button class="btn-close" data-bs-dismiss="modal"></button>
       </div>
 
@@ -214,13 +214,29 @@
         <!-- Kirjautumislomake -->
         <form id="loginForm">
           <label class="form-label">Käyttäjänimi</label>
-          <input type="text" id="usernameInput" class="form-control mb-3">
+          <input type="text" id="usernameInput" class="form-control mb-3" required>
 
           <label class="form-label">Salasana</label>
-          <input type="password" id="passwordInput" class="form-control mb-3">
+          <input type="password" id="passwordInput" class="form-control mb-3" required>
 
-          <button type="submit" class="btn btn-primary w-100">Kirjaudu</button>
+          <button type="submit" class="btn btn-primary w-100 mb-2">Kirjaudu</button>
         </form>
+
+        <!-- Rekisteröintilomake (aluksi piilotettu) -->
+        <form id="registerForm" class="d-none">
+          <label class="form-label">Uusi käyttäjänimi</label>
+          <input type="text" id="regUsernameInput" class="form-control mb-3" required>
+
+          <label class="form-label">Salasana</label>
+          <input type="password" id="regPasswordInput" class="form-control mb-3" required>
+
+          <button type="submit" class="btn btn-success w-100 mb-2">Rekisteröidy</button>
+        </form>
+
+        <!-- Vaihtoehtoinen linkki -->
+        <div class="text-center mt-2">
+          <a href="#" id="toggleAuth">Ei tiliä? Rekisteröidy</a>
+        </div>
 
         <!-- Uloskirjautuminen -->
         <div id="logoutSection" class="d-none mt-3">
