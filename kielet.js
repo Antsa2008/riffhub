@@ -1,8 +1,8 @@
 const tuotteet = [
-      { id: 11, name: "Ernie Ball - Regular Slinky", price: 11.00, img: "kuvat/ernieball.png" },
-      { id: 12, name: "Ernie Ball - Super Slinky", price: 11.00, img: "kuvat/ernieball_SS.png" },
-      { id: 13, name: "Ernie Ball - Power Slinky", price: 11.00, img: "kuvat/ernieball_PS.png" },
-      { id: 14, name: "Ernie Ball - Mighty Slinky", price: 11.00, img: "kuvat/ernieball_MS.png" },
+      { id: 17, name: "Ernie Ball - Regular Slinky", price: 11.00, img: "kuvat/ernieball.png" },
+      { id: 18, name: "Ernie Ball - Super Slinky", price: 11.00, img: "kuvat/ernieball_SS.png" },
+      { id: 19, name: "Ernie Ball - Power Slinky", price: 11.00, img: "kuvat/ernieball_PS.png" },
+      { id: 20, name: "Ernie Ball - Mighty Slinky", price: 11.00, img: "kuvat/ernieball_MS.png" },
     ];
 
 

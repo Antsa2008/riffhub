@@ -1,8 +1,8 @@
 const tuotteet = [
-      { id: 11, name: "Funko Pop! - Lady Justice", price: 18.00, img: "kuvat/L_justice.png" },
-      { id: 12, name: "Funko Pop! - Vic Rattlehead", price: 18.00, img: "kuvat/rattlehead.png" },
-      { id: 13, name: "Funko Pop! - Eddie (The trooper)", price: 23.00, img: "kuvat/ironmaiden_pop.png" },
-      { id: 14, name: "Funko Pop! Deluxe Moment: Metallica Master of Puppets Tour (1986)", price: 180.00, img: "kuvat/metallica_funko.png" },
+      { id: 13, name: "Funko Pop! - Lady Justice", price: 18.00, img: "kuvat/L_justice.png" },
+      { id: 14, name: "Funko Pop! - Vic Rattlehead", price: 18.00, img: "kuvat/rattlehead.png" },
+      { id: 15, name: "Funko Pop! - Eddie (The trooper)", price: 23.00, img: "kuvat/ironmaiden_pop.png" },
+      { id: 16, name: "Funko Pop! Deluxe Moment: Metallica Master of Puppets Tour (1986)", price: 180.00, img: "kuvat/metallica_funko.png" },
     ];
 
 

@@ -1,8 +1,8 @@
 const tuotteet = [
-      { id: 15, name: "Fender Mustang LT25", price: 11.00, img: "kuvat/fender_mustang_LT25.png" },
-      { id: 16, name: "Marshall JVM410H", price: 11.00, img: "kuvat/Marshall_JVM410.png" },
-      { id: 17, name: "Marshall 1960AV 412 Cabinet", price: 11.00, img: "kuvat/Marshall_1960AV.png" },
-      { id: 18, name: "Mooer Hornet 30 Watt Black Amplifier", price: 11.00, img: "kuvat/Hornet.png" },
+      { id: 9, name: "Fender Mustang LT25", price: 11.00, img: "kuvat/fender_mustang_LT25.png" },
+      { id: 10, name: "Marshall JVM410H", price: 11.00, img: "kuvat/Marshall_JVM410.png" },
+      { id: 11, name: "Marshall 1960AV 412 Cabinet", price: 11.00, img: "kuvat/Marshall_1960AV.png" },
+      { id: 12, name: "Mooer Hornet 30 Watt Black Amplifier", price: 11.00, img: "kuvat/Hornet.png" },
     ];
 
 
