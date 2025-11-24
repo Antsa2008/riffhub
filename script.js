@@ -110,11 +110,13 @@ const loginModal = new bootstrap.Modal(document.getElementById("loginModal"));
 const loginForm = document.getElementById("loginForm");
 const usernameInput = document.getElementById("usernameInput");
 const passwordInput = document.getElementById("passwordInput");
+const showPasswordLogin = document.getElementById("showPasswordLogin"); // checkbox
 
 // Register
 const registerForm = document.getElementById("registerForm");
 const regUsernameInput = document.getElementById("regUsernameInput");
 const regPasswordInput = document.getElementById("regPasswordInput");
+const showPasswordRegister = document.getElementById("showPasswordRegister"); // checkbox
 
 // Toggle link
 const toggleAuthLink = document.getElementById("toggleAuth");
@@ -127,6 +129,18 @@ const logoutBtn = document.getElementById("logoutBtn");
 
 // Haetaan kirjautunut käyttäjä
 let loggedUser = localStorage.getItem("loggedUser");
+
+// Näytä/piilota salasana (checkbox)
+if (showPasswordLogin) {
+  showPasswordLogin.addEventListener("change", () => {
+    passwordInput.type = showPasswordLogin.checked ? "text" : "password";
+  });
+}
+if (showPasswordRegister) {
+  showPasswordRegister.addEventListener("change", () => {
+    regPasswordInput.type = showPasswordRegister.checked ? "text" : "password";
+  });
+}
 
 // Avaa modaalin
 userBtn.addEventListener("click", () => {
@@ -179,7 +193,6 @@ registerForm.addEventListener("submit", (e) => {
     return;
   }
 
-  // Hae käyttäjät LocalStoragesta
   let users = JSON.parse(localStorage.getItem("users")) || [];
 
   if (users.find(u => u.username === username)) {
@@ -187,7 +200,6 @@ registerForm.addEventListener("submit", (e) => {
     return;
   }
 
-  // Lisää uusi käyttäjä
   users.push({ username, password });
   localStorage.setItem("users", JSON.stringify(users));
 
@@ -226,9 +238,6 @@ logoutBtn.addEventListener("click", () => {
   loggedUser = null;
   updateAuthModal();
 });
-
-// Alussa päivitä modaalin tila
-updateAuthModal();
 
 /* ==========================================================
    ALKUKUTSU
