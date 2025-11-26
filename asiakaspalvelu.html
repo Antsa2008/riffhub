@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -54,6 +54,34 @@
     </div>
   </div>
 </nav>
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="sideMenu">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title">Valikko</h5>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+  </div>
+
+  <div class="offcanvas-body">
+
+    <h6 class="text-muted">Kategoriat</h6>
+    <ul class="list-unstyled">
+      <li><a href="kitarat.html" class="d-block py-2">🎸 Kitarat</a></li>
+      <li><a href="kielet_ja_tarvikkeet.html" class="d-block py-2">🧵 Kielet & Tarvikkeet</a></li>
+      <li><a href="vahvistimet_ja_aanentoistolaitteet.html" class="d-block py-2">🔊 Vahvistimet</a></li>
+      <li><a href="fanituotteet.html" class="d-block py-2">⭐ Fanituotteet</a></li>
+    </ul>
+
+    <hr class="bg-light">
+
+    <h6 class="text-muted">Tilisi & Tuki</h6>
+    <ul class="list-unstyled">
+      <li><a href="cart.html" class="d-block py-2">🛒 Ostoskori</a></li>
+      <li><a href="toimitustiedot.html" class="d-block py-2">📦 Toimitustiedot</a></li>
+      <li><a href="asiakaspalvelu.html" class="d-block py-2">📞 Asiakaspalvelu</a></li>
+    </ul>
+
+  </div>
+</div>
 
 <!-- ASIAKASPALVELU SISÄLTÖ -->
 <div class="container my-5">
@@ -158,33 +186,44 @@
 
 </div>
 
-<!-- uuden koodin loppu -->
+    <section id="products">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2 class="h2">Suositut tuotteet</h2>
+        <div class="small text-muted">Päivitetty: <span id="updatedAt"></span></div>
+      </div>
+      <div id="productGrid" class="row g-4"></div>
+      <div class="text-center mt-4"><a href="#" class="btn btn-outline-primary">Näytä lisää</a></div>
+    </section>
 
-<div class="offcanvas offcanvas-start" tabindex="-1" id="sideMenu">
-  <div class="offcanvas-header">
-    <h5 class="offcanvas-title">Valikko</h5>
-    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
-  </div>
+  </main>
 
-  <div class="offcanvas-body">
+  <footer class="bg-light py-4 mt-5">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="small text-muted">© RiffHub 2025</div>
+      <div><a href="#" class="text-decoration-none me-3">Tietosuojaseloste</a><a href="#" class="text-decoration-none">Yhteystiedot</a></div>
+    </div>
+  </footer>
 
-    <h6 class="text-muted">Kategoriat</h6>
-    <ul class="list-unstyled">
-      <li><a href="kitarat.html" class="d-block py-2">🎸 Kitarat</a></li>
-      <li><a href="kielet_ja_tarvikkeet.html" class="d-block py-2">🧵 Kielet & Tarvikkeet</a></li>
-      <li><a href="vahvistimet_ja_aanentoistolaitteet.html" class="d-block py-2">🔊 Vahvistimet</a></li>
-      <li><a href="fanituotteet.html" class="d-block py-2">⭐ Fanituotteet</a></li>
-    </ul>
+<div class="modal fade" id="cartModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      
+      <div class="modal-header">
+        <h5 class="modal-title">Ostoskori</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Sulje"></button>
+      </div>
 
-    <hr class="bg-light">
+      <div class="modal-body">
+        <div id="cartItems">Ostoskori on tyhjä.</div>
+      </div>
 
-    <h6 class="text-muted">Tilisi & Tuki</h6>
-    <ul class="list-unstyled">
-      <li><a href="cart.html" class="d-block py-2">🛒 Ostoskori</a></li>
-      <li><a href="toimitustiedot.html" class="d-block py-2">📦 Toimitustiedot</a></li>
-      <li><a href="asiakaspalvelu.html" class="d-block py-2">📞 Asiakaspalvelu</a></li>
-    </ul>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-bs-dismiss="modal">Jatka ostoksia</button>
+        <!-- Tämä linkki vie käyttäjän ostoskori-sivulle -->
+        <a href="cart.html" class="btn btn-primary">Siirry kassalle</a>
+      </div>
 
+    </div>
   </div>
 </div>
 
@@ -253,7 +292,7 @@
   </div>
 </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
