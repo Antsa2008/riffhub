@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -83,88 +83,10 @@
   </div>
 </div>
 
-  <main class="container my-5">
-    <section class="hero mb-4">
-      <div class="row align-items-center">
-        <div class="col-lg-7">
-          <h1 class="display-6 fw-bold">RiffHub — fanituotteet, soittimet ja tarvikkeet</h1>
-          <p class="lead">Löydä soundisi. Nopeasti toimitettavat kielisarjat, vahvistimet ja paljon muuta — valitse helposti ja tilaa.</p>
-          <div class="d-flex gap-2">
-            <a href="#products" class="btn btn-lg bg-danger">Tutustu tuotteisiin</a>
-            <a href="#" class="btn btn-lg bg-danger">Erikoistarjoukset</a>
-          </div>
-          <ul class="mt-4 list-unstyled d-flex gap-3">
-            <li><strong>Nopea toimitus</strong> — Suomessa</li>
-            <li class="text-muted">|</li>
-            <li><strong>30 pv palautus</strong></li>
-            <li class="text-muted">|</li>
-            <li><strong>Asiakaspalvelu</strong> ark. 9–17</li>
-          </ul>
-        </div>
-        <div class="col-lg-5 d-none d-lg-block text-center">
-          <img src="kuvat/davepookie.png" alt="RiffHub hero" class="img-fluid rounded shadow-sm">
-        </div>
-      </div>
-    </section>
-
-    <section class="mb-4">
-      <div class="d-flex justify-content-between align-items-center mb-3">
-        <h2 class="h2">Kategoriat</h2>
-        <a href="kategoriatsviu.html" class="small text-decoration-none btn-lg">Katso kaikki</a>
-      </div>
-<div class="row g-3">
-  <!-- Soittimet -->
-  <div class="col-sm-6 col-md-3">
-    <a href="soittimet.html" class="text-decoration-none text-dark">
-      <div class="card p-3 text-center">
-        <img src="kuvat/lespaul_fp.png" alt="Soittimet" class="mx-auto mb-2 img-fluid">
-        <div class="fw-semibold">Soittimet</div>
-      </div>
-    </a>
-  </div>
-
-  <!-- Kielet & Tarvikkeet -->
-  <div class="col-sm-6 col-md-3">
-    <a href="kielet_ja_tarvikkeet.html" class="text-decoration-none text-dark">
-      <div class="card p-3 text-center">
-        <img src="kuvat/ernieball.png" alt="Kielet" class="mx-auto mb-2 img-fluid">
-        <div class="fw-semibold">Kielet & Tarvikkeet</div>
-      </div>
-    </a>
-  </div>
-
-  <!-- Vahvistimet & Äänentoisto -->
-  <div class="col-sm-6 col-md-3">
-    <a href="vahvistimet_ja_aanentoistolaitteet.html" class="text-decoration-none text-dark">
-      <div class="card p-3 text-center">
-        <img src="kuvat/fender_mustang_LT25.png" alt="Vahvistimet" class="mx-auto mb-2 img-fluid">
-        <div class="fw-semibold">Vahvistimet & Äänentoistolaitteet</div>
-      </div>
-    </a>
-  </div>
-
-  <!-- Fanituotteet -->
-  <div class="col-sm-6 col-md-3">
-    <a href="fanituotteet.html" class="text-decoration-none text-dark">
-      <div class="card p-3 text-center">
-        <img src="kuvat/rattlehead.png" alt="Fanituotteet" class="mx-auto mb-2 img-fluid">
-        <div class="fw-semibold">Fani-tuotteet</div>
-      </div>
-    </a>
-  </div>
-</div>
-    </section>
-
-    <section id="products">
-      <div class="d-flex justify-content-between align-items-center mb-3">
-        <h2 class="h2">Suositut tuotteet</h2>
-        <div class="small text-muted">Päivitetty: <span id="updatedAt"></span></div>
-      </div>
-      <div id="productGrid" class="row g-4"></div>
-      <div class="text-center mt-4"><a href="#" class="btn btn-outline-primary">Näytä lisää</a></div>
-    </section>
-
-  </main>
+<main class="container my-5">
+    <h1 class="mb-4 text-center">Tuotteet</h1>
+    <div id="productLista" class="row g-4"></div>
+</main>
 
   <footer class="bg-light py-4 mt-5">
     <div class="container d-flex justify-content-between align-items-center">
@@ -172,6 +94,7 @@
       <div><a href="#" class="text-decoration-none me-3">Tietosuojaseloste</a><a href="#" class="text-decoration-none">Yhteystiedot</a></div>
     </div>
   </footer>
+
 
 <div class="modal fade" id="cartModal" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
@@ -261,7 +184,8 @@
   </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="bassot.js"></script>
+  
 </body>
 </html>
