@@ -45,9 +45,120 @@
         </li>
       </ul>
 
+<li class="nav-item ms-3">
+  <button id="userBtn" class="btn btn-outline-dark rounded-circle p-1">
+    <img src="kuvat/default_pfp.png" width="10" height="100" alt="Käyttäjäprofiili">
+  </button>
+</li>
+
     </div>
   </div>
 </nav>
+
+<!-- ASIAKASPALVELU SISÄLTÖ -->
+<div class="container my-5">
+  <h1 class="mb-4 fw-bold">Asiakaspalvelu</h1>
+  <p class="text-muted mb-4 asiakaspalvelu-teksti">
+    Tervetuloa RiffHubin asiakaspalveluun! Autamme sinua tilauksiin, tuotteisiin ja toimituksiin liittyvissä kysymyksissä.</p>
+  </p>
+
+  <!-- Yhteystiedot -->
+  <div class="card p-4 shadow-sm mb-4">
+    <h3 class="fw-semibold mb-3">📞 Ota yhteyttä</h3>
+    <p><strong>Sähköposti:</strong> asiakaspalvelu@riffhub.fi</p>
+    <p><strong>Puhelin:</strong> 040 123 4567</p>
+    <p><strong>Aukioloajat:</strong> Ma–Pe 9:00–17:00</p>
+    <p><strong>Osoite:</strong> RiffHub Oy, Musiikkikatu 12, 00100 Helsinki</p>
+  </div>
+
+  <!-- FAQ -->
+  <div class="card p-4 shadow-sm mb-4">
+    <h3 class="fw-semibold mb-3">❓ Usein kysytyt kysymykset</h3>
+
+    <div class="accordion" id="faqAccordion">
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+            Kuinka kauan toimitus kestää?
+          </button>
+        </h2>
+        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Toimitusaikamme on yleensä 1–3 arkipäivää. Sesonkiaikoina 2–5 päivää.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+            Miten voin palauttaa tuotteen?
+          </button>
+        </h2>
+        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Sinulla on 14 päivän palautusoikeus. Ota yhteyttä asiakaspalveluun saadaksesi palautusohjeet.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+            Mitä maksutapoja hyväksytte?
+          </button>
+        </h2>
+        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Hyväksymme yleisimmät maksukortit, verkkopankkimaksut, MobilePayn ja PayPalin.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+            Miten voin seurata tilaustani?
+          </button>
+        </h2>
+        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Saat sähköpostiin seurantakoodin heti, kun tilauksesi on lähetetty.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Yhteydenottolomake -->
+  <div class="card p-4 shadow-sm mb-5">
+    <h3 class="fw-semibold mb-3">📬 Lähetä viesti asiakaspalveluun</h3>
+
+    <form onsubmit="return false;">
+      <div class="mb-3">
+        <label class="form-label">Nimi</label>
+        <input type="text" class="form-control" placeholder="Etunimi Sukunimi">
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Sähköposti</label>
+        <input type="email" class="form-control" placeholder="esimerkki@posti.fi">
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Viesti</label>
+        <textarea class="form-control" rows="4" placeholder="Kirjoita kysymyksesi"></textarea>
+      </div>
+
+      <button class="btn btn-primary w-100">Lähetä viesti</button>
+    </form>
+  </div>
+
+</div>
+
+<!-- uuden koodin loppu -->
 
 <div class="offcanvas offcanvas-start" tabindex="-1" id="sideMenu">
   <div class="offcanvas-header">
@@ -76,6 +187,73 @@
 
   </div>
 </div>
+
+<!-- ========================================================= -->
+<!-- KIRJAUTUMIS/REKISTERÖINTIMODAALI -->
+<!-- ========================================================= -->
+
+<div class="modal fade" id="loginModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 id="modalTitle">Kirjaudu sisään</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+
+        <!-- Kirjautumislomake -->
+        <form id="loginForm">
+          <label class="form-label">Käyttäjänimi</label>
+          <input type="text" id="usernameInput" class="form-control mb-3" required>
+
+          <label class="form-label">Salasana</label>
+          <input type="password" id="passwordInput" class="form-control mb-1" required>
+          <div class="form-check mb-3">
+            <input class="form-check-input" type="checkbox" value="" id="showPasswordLogin">
+            <label class="form-check-label" for="showPasswordLogin">
+              Näytä salasana
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-primary w-100 mb-2">Kirjaudu</button>
+        </form>
+
+        <!-- Rekisteröintilomake -->
+        <form id="registerForm" class="d-none">
+          <label class="form-label">Uusi käyttäjänimi</label>
+          <input type="text" id="regUsernameInput" class="form-control mb-3" required>
+
+          <label class="form-label">Salasana</label>
+          <input type="password" id="regPasswordInput" class="form-control mb-1" required>
+          <div class="form-check mb-3">
+            <input class="form-check-input" type="checkbox" value="" id="showPasswordRegister">
+            <label class="form-check-label" for="showPasswordRegister">
+              Näytä salasana
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-success w-100 mb-2">Rekisteröidy</button>
+        </form>
+
+        <div class="text-center mt-2">
+          <a href="#" id="toggleAuth">Ei tiliä? Rekisteröidy</a>
+        </div>
+
+        <!-- Uloskirjautuminen -->
+        <div id="logoutSection" class="d-none mt-3">
+          <p>Kirjautunut: <strong id="loggedUser"></strong></p>
+          <button id="logoutBtn" class="btn btn-danger w-100">Kirjaudu ulos</button>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
