@@ -1,8 +1,24 @@
 const tuotteet = [
-      { id: 21, name: "Funko Pop! - Lady Justice", price: 18.00, img: "kuvat/L_justice.png" },
-      { id: 22, name: "Funko Pop! - Vic Rattlehead", price: 18.00, img: "kuvat/rattlehead.png" },
-      { id: 23, name: "Funko Pop! - Eddie (The trooper)", price: 23.00, img: "kuvat/ironmaiden_pop.png" },
-      { id: 24, name: "Funko Pop! Deluxe Moment: Metallica Master of Puppets Tour (1986)", price: 180.00, img: "kuvat/metallica_funko.png" },
+      { id: 21, name: "Megadeth I Dont Care - T-paita", price: 29.90, img: "kuvat/IDONTCARE.png" },
+      { id: 22, name: "Metallica And Justice For All - T-paita", price: 29.90, img: "kuvat/AFJA_SHIRT.png.png" },
+      { id: 23, name: "Metallica Garage Inc - T-paita", price: 24.99, img: "kuvat/ginc-Photoroom.png" },
+      { id: 24, name: "Megadeth Tipping Point - T-paita", price: 29.90, img: "kuvat/tippingpoint.png" },
+      { id: 25, name: "Megadeth Rust In Peace - T-paita", price: 29.90, img: "kuvat/rust_inpeace.png" },
+      { id: 26, name: "Metallica Ride The Lightning - Vintage T-paita", price: 35.00, img: "kuvat/Metallica_VintageRideTheLightning_Shirt.png" },
+      { id: 27, name: "Metallica Ride The Lightning - T-paita", price: 24.99, img: "kuvat/Metallica_RideTheLightning_ShirtV2.png" },
+      { id: 28, name: "Metallica Kill Em All - T-paita", price: 29.90, img: "kuvat/Metallica_KillEmAllTracks_Shirt.png" },
+      { id: 29, name: "Megadeth Youthanasia - T-paita", price: 29.90, img: "kuvat/Megadeth_Youthanasia_Shirt.png" },
+      { id: 30, name: "Megadeth Peace Sells But Who Is Buying - T-paita", price: 29.90, img: "kuvat/Megadeth_PeaceSells_Shirt.png" },
+      { id: 31, name: "Megadeth Black Friday - T-paita", price: 29.90, img: "kuvat/Megadeth_BlackFriday.png" },
+      { id: 32, name: "Jonestown - College paita", price: 29.90, img: "kuvat/Jonestown_college-Photoroom.png" },
+      { id: 33, name: "Nocturnal - Depression Deathcade T-paita", price: 29.90, img: "kuvat/Nocturnal_Depression_Deathcade.png" },
+      { id: 34, name: "Psychonaut4 - T-paita", price: 29.90, img: "kuvat/pn4-Photoroom.png" },
+      { id: 35, name: "Deicide - T-paita", price: 19.90, img: "kuvat/deicide-Photoroom.png" },
+      { id: 36, name: "Possessed Revelations Of Oblivion - Huppari", price: 59.90, img: "kuvat/revelations-of-oblivion-Photoroom.png" },
+      { id: 37, name: "Dissection Storm Of The Light's Bane - Huppari", price: 84.99, img: "kuvat/dissection-Photoroom.png" },
+      { id: 38, name: "Obituary - Huppari", price: 64.99, img: "kuvat/obituary-Photoroom.png" },
+      { id: 39, name: "Palaye Royale - T-paita", price: 17.90, img: "kuvat/pr-Photoroom.png" },
+      { id: 40, name: "Exodus - Huppari", price: 49.90, img: "kuvat/Exodus-Photoroom.png" },
     ];
 
 
