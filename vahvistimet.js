@@ -114,3 +114,150 @@ const tuotteet = [
       updateCartModal();
       cartModal.show();
     });
+
+        /* ==========================================================
+   KIRJAUTUMINEN JA REKISTERÖINTI (LocalStorage)
+   ========================================================== */
+
+const userBtn = document.getElementById("userBtn");
+const loginModal = new bootstrap.Modal(document.getElementById("loginModal"));
+
+// Login
+const loginForm = document.getElementById("loginForm");
+const usernameInput = document.getElementById("usernameInput");
+const passwordInput = document.getElementById("passwordInput");
+const showPasswordLogin = document.getElementById("showPasswordLogin"); // checkbox
+
+// Register
+const registerForm = document.getElementById("registerForm");
+const regUsernameInput = document.getElementById("regUsernameInput");
+const regPasswordInput = document.getElementById("regPasswordInput");
+const showPasswordRegister = document.getElementById("showPasswordRegister"); // checkbox
+
+// Toggle link
+const toggleAuthLink = document.getElementById("toggleAuth");
+const modalTitle = document.getElementById("modalTitle");
+
+// Logout
+const logoutSection = document.getElementById("logoutSection");
+const loggedUserElement = document.getElementById("loggedUser");
+const logoutBtn = document.getElementById("logoutBtn");
+
+// Haetaan kirjautunut käyttäjä
+let loggedUser = localStorage.getItem("loggedUser");
+
+// Näytä/piilota salasana (checkbox)
+if (showPasswordLogin) {
+  showPasswordLogin.addEventListener("change", () => {
+    passwordInput.type = showPasswordLogin.checked ? "text" : "password";
+  });
+}
+if (showPasswordRegister) {
+  showPasswordRegister.addEventListener("change", () => {
+    regPasswordInput.type = showPasswordRegister.checked ? "text" : "password";
+  });
+}
+
+// Avaa modaalin
+userBtn.addEventListener("click", () => {
+  updateAuthModal();
+  loginModal.show();
+});
+
+// Päivitä modaalin näkymä kirjautuneen tilan mukaan
+function updateAuthModal() {
+  if (loggedUser) {
+    loginForm.classList.add("d-none");
+    registerForm.classList.add("d-none");
+    logoutSection.classList.remove("d-none");
+    toggleAuthLink.classList.add("d-none");
+    modalTitle.textContent = "Tervetuloa";
+    loggedUserElement.textContent = loggedUser;
+  } else {
+    loginForm.classList.remove("d-none");
+    registerForm.classList.add("d-none");
+    logoutSection.classList.add("d-none");
+    toggleAuthLink.classList.remove("d-none");
+    modalTitle.textContent = "Kirjaudu sisään";
+  }
+}
+
+// Vaihda login <-> register
+toggleAuthLink.addEventListener("click", (e) => {
+  e.preventDefault();
+  if (loginForm.classList.contains("d-none")) {
+    loginForm.classList.remove("d-none");
+    registerForm.classList.add("d-none");
+    modalTitle.textContent = "Kirjaudu sisään";
+    toggleAuthLink.textContent = "Ei tiliä? Rekisteröidy";
+  } else {
+    loginForm.classList.add("d-none");
+    registerForm.classList.remove("d-none");
+    modalTitle.textContent = "Rekisteröidy";
+    toggleAuthLink.textContent = "Onko sinulla jo tili? Kirjaudu";
+  }
+});
+
+// Rekisteröinti
+registerForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const username = regUsernameInput.value.trim();
+  const password = regPasswordInput.value.trim();
+
+  if (username.length < 3 || password.length < 3) {
+    alert("Käyttäjänimi ja salasana vähintään 3 merkkiä");
+    return;
+  }
+
+  let users = JSON.parse(localStorage.getItem("users")) || [];
+
+  if (users.find(u => u.username === username)) {
+    alert("Käyttäjänimi on jo käytössä.");
+    return;
+  }
+
+  users.push({ username, password });
+  localStorage.setItem("users", JSON.stringify(users));
+
+  alert("Rekisteröinti onnistui! Kirjaudu sisään.");
+  toggleAuthLink.click(); // vaihda login-näkymään
+  regUsernameInput.value = "";
+  regPasswordInput.value = "";
+});
+
+// Kirjautuminen
+loginForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const username = usernameInput.value.trim();
+  const password = passwordInput.value.trim();
+
+  let users = JSON.parse(localStorage.getItem("users")) || [];
+  const user = users.find(u => u.username === username && u.password === password);
+
+  if (!user) {
+    alert("Virheellinen käyttäjänimi tai salasana.");
+    return;
+  }
+
+  loggedUser = username;
+  localStorage.setItem("loggedUser", loggedUser);
+
+  usernameInput.value = "";
+  passwordInput.value = "";
+  updateAuthModal();
+  loginModal.hide();
+});
+
+// Uloskirjautuminen
+logoutBtn.addEventListener("click", () => {
+  localStorage.removeItem("loggedUser");
+  loggedUser = null;
+  updateAuthModal();
+});
+
+/* ==========================================================
+   ALKUKUTSU
+   ========================================================== */
+renderProducts();
+updateCartCount();
+updateAuthModal();
