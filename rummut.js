@@ -1,12 +1,12 @@
     const tuotteet = [
-      { id: 41, name: "Epiphone Les Paul Custom EB", price: 766.00, img: "kuvat/.png" },
-      { id: 42, name: "Jackson JS32 King V BLK AH", price: 499.00, img: "kuvat/.png" },
-      { id: 43, name: "Ltd KH-202", price: 399.00, img: "kuvat/.png" },
-      { id: 44, name: "Fender Player II", price: 499.00, img: "kuvat/.png" },
-      { id: 45, name: "Ltd Snakebyte JH", price: 1499.00, img: "kuvat/.png" },
-      { id: 46, name: "Kramer Guitars Dave Mustaine Vanguard SM", price: 815.00, img: "kuvat/.png"},
-      { id: 47, name: "Schecter Synyster Gates Standard Gloss", price: 1111.00, img: "kuvat/.png"},
-      { id: 48, name: "Schecter Synyster Gates Standard Gloss", price: 5990.00, img: "kuvat/.png"},
+      { id: 41, name: "Tama Imperialstar 22'' 5pc Drum Kit, Blacked Out Black", price: 954.00, img: "kuvat/Tama_drums-Photoroom.png" },
+      { id: 42, name: "Millenium MX422 Standard Set RL", price: 458.00, img: "kuvat/Millenium_MX422.png" },
+      { id: 43, name: "Yamaha Rydeen Studio Black Glitter", price: 855.00, img: "kuvat/Yamaha_Rydeen_Studio_Black_Glitter.png" },
+      { id: 44, name: "Yamaha Stage Custom 22'' 5 Piece Shell Pack w/ Hardware, Cranberry Red", price: 1238.00, img: "kuvat/Yamaha_Stage_Custom.png" },
+      { id: 45, name: "Yamaha Rydeen Studio Mellow Yellow", price: 855.00, img: "kuvat/Yamaha_Rydeen_Studio_yellow.png" },
+      { id: 46, name: "Pearl Roadshow 22'' Plus Jet Black", price: 888.00, img: "kuvat/Pearl_Roadshow_Plus.png"},
+      { id: 47, name: "Tama Stagestar 20 5-pcs Kit BNS", price: 649.00, img: "kuvat/Tama_stagestar.png"},
+      { id: 48, name: "Pearl 22'' Export Double Bass Set JB", price: 1999.00, img: "kuvat/Pearl_Export_Double_Bass.png"},
     ];
 
 
