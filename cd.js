@@ -1,12 +1,12 @@
     const tuotteet = [
-      { id: 41, name: "Epiphone Les Paul Custom EB", price: 766.00, img: "kuvat/.png" },
-      { id: 42, name: "Jackson JS32 King V BLK AH", price: 499.00, img: "kuvat/.png" },
-      { id: 43, name: "Ltd KH-202", price: 399.00, img: "kuvat/.png" },
-      { id: 44, name: "Fender Player II", price: 499.00, img: "kuvat/.png" },
-      { id: 45, name: "Ltd Snakebyte JH", price: 1499.00, img: "kuvat/.png" },
-      { id: 46, name: "Kramer Guitars Dave Mustaine Vanguard SM", price: 815.00, img: "kuvat/.png"},
-      { id: 47, name: "Schecter Synyster Gates Standard Gloss", price: 1111.00, img: "kuvat/.png"},
-      { id: 48, name: "Schecter Synyster Gates Standard Gloss", price: 5990.00, img: "kuvat/.png"},
+      { id: 65, name: "", price: 766.00, img: "kuvat/.png" },
+      { id: 66, name: "", price: 499.00, img: "kuvat/.png" },
+      { id: 67, name: "", price: 399.00, img: "kuvat/.png" },
+      { id: 68, name: "", price: 499.00, img: "kuvat/.png" },
+      { id: 69, name: "", price: 1499.00, img: "kuvat/.png" },
+      { id: 70, name: "", price: 815.00, img: "kuvat/.png"},
+      { id: 71, name: "", price: 1111.00, img: "kuvat/.png"},
+      { id: 72, name: "", price: 5990.00, img: "kuvat/.png"},
     ];
 
 

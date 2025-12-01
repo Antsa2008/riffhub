@@ -1,12 +1,12 @@
     const tuotteet = [
-      { id: 41, name: "Epiphone Les Paul Custom EB", price: 766.00, img: "kuvat/.png" },
-      { id: 42, name: "Jackson JS32 King V BLK AH", price: 499.00, img: "kuvat/.png" },
-      { id: 43, name: "Ltd KH-202", price: 399.00, img: "kuvat/.png" },
-      { id: 44, name: "Fender Player II", price: 499.00, img: "kuvat/.png" },
-      { id: 45, name: "Ltd Snakebyte JH", price: 1499.00, img: "kuvat/.png" },
-      { id: 46, name: "Kramer Guitars Dave Mustaine Vanguard SM", price: 815.00, img: "kuvat/.png"},
-      { id: 47, name: "Schecter Synyster Gates Standard Gloss", price: 1111.00, img: "kuvat/.png"},
-      { id: 48, name: "Schecter Synyster Gates Standard Gloss", price: 5990.00, img: "kuvat/.png"},
+      { id: 57, name: "Metallica - Master Of Puppets vinyylilevy", price: 30.99, img: "kuvat/MOP_vinyl-Photoroom.png" },
+      { id: 58, name: "Nirvana - Nevermind vinyylilevy", price: 48.00, img: "kuvat/nirvana_vinyl-Photoroom.png" },
+      { id: 59, name: "Palaye Royale - Fever Dream vinyylilevy", price: 28.00, img: "kuvat/FD_vinyl-Photoroom.png" },
+      { id: 60, name: "Palaye Royale - The Bastards vinyylilevy", price: 28.00, img: "kuvat/TB_vinyl-Photoroom.png" },
+      { id: 61, name: "Palaye Royale - Death Or Glory vinyylilevy", price: 28.00, img: "kuvat/DOG_vinyl-Photoroom.png" },
+      { id: 62, name: "Iron Maiden - Fear Of The Dark vinyylilevy", price: 35.99, img: "kuvat/FOD_vinyl-Photoroom.png"},
+      { id: 63, name: "vinyylilevy", price: 1111.00, img: "kuvat/.png"},
+      { id: 64, name: "vinyylilevy", price: 5990.00, img: "kuvat/.png"},
     ];
 
 
