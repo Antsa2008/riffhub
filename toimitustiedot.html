@@ -12,14 +12,14 @@
 <body>
 
 <!--Nav bar-->
-<nav class="navbar navbar-expand-lg navbar-light bg-rgb(156, 12, 41) shadow-sm">
+<nav class="navbar navbar-expand-lg navbar-light shadow-sm">
   <div class="container">
 
     <!-- SIVUPALKIN NAPPI -->
     <button class="btn btn-dark me-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#sideMenu">
       ☰
     </button>
-
+    <!-- LOGO -->
     <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
       <img src="kuvat/riffhub-high-resolution-logo.png" alt="RiffHub" class="me-2 rounded-circle">
       RiffHub
@@ -29,10 +29,15 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
+    <!-- SEARCH BAR -->
+
     <div class="collapse navbar-collapse" id="navMain">
       <form class="d-flex ms-auto me-3" role="search" onsubmit="return false;">
         <input id="searchInput" class="form-control me-2" type="search" placeholder="Etsi tuotteita" aria-label="Haku">
       </form>
+
+
+      <!-- OSTOSKORI -->
 
       <ul class="navbar-nav align-items-lg-center">
         <li class="nav-item">
@@ -45,10 +50,18 @@
         </li>
       </ul>
 
+      <!--  PROFIILIKUVA jota klikkaamalla aukeaa kirjautuis/rekisteröitymis modalin -->
+
+<li class="nav-item ms-3">
+  <button id="userBtn" class="btn btn-outline-dark rounded-circle p-1">
+    <img src="kuvat/default_pfp.png" width="10" height="100" alt="Käyttäjäprofiili">
+  </button>
+</li>
+
     </div>
   </div>
 </nav>
-
+      <!--Sivupalkin/valikon "oikopolut" eri sivuille-->
 <div class="offcanvas offcanvas-start" tabindex="-1" id="sideMenu">
   <div class="offcanvas-header">
     <h5 class="offcanvas-title">Valikko</h5>
@@ -77,7 +90,245 @@
   </div>
 </div>
 
+ <header class="hero">
+    <div class="container">
+      <h1 class="display-6 mb-1">Toimitustiedot</h1>
+      <p class="lead mb-0">Kaikki mitä sinun tarvitsee tietää tilauksesi toimituksesta, seurannasta ja palautuksesta.</p>
+    </div>
+  </header>
+
+  <main class="container mb-5">
+    <!-- Yhteenveto -->
+    <section class="mb-4">
+      <div class="card p-4 shadow-sm">
+        <h2 class="h5">Pikakatsaus</h2>
+        <p class="muted mb-0 small-note">
+          Tuote lähetetään yleensä <strong>1–3 arkipäivän</strong> kuluessa tilauksesta (käsittelyaika). Toimitusaika riippuu valitusta kuljetustavasta ja postin/ kuriirin reitistä.
+        </p>
+      </div>
+    </section>
+
+    <!-- Toimitusvaihtoehdot ja hinnat -->
+    <section class="mb-4">
+      <div class="card p-4 shadow-sm">
+        <h2 class="h5">Toimitusvaihtoehdot ja hinnasto</h2>
+
+        <div class="table-responsive">
+          <table class="table table-borderless align-middle mt-3">
+            <thead>
+              <tr>
+                <th>Vaihtoehto</th>
+                <th>Kuvaus</th>
+                <th>Arvioitu toimitusaika</th>
+                <th>Hinta</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Matkahuolto / Posti noutopiste</strong></td>
+                <td>Toimitus lähimpään noutopisteeseen. Ilmoitamme, kun paketti on noudettavissa.</td>
+                <td>2–5 arkipäivää</td>
+                <td>4,90 €</td>
+              </tr>
+              <tr>
+                <td><strong>Posti kotiinkuljetus</strong></td>
+                <td>Suoraan kotiovelle (postin aikataulun mukaisesti).</td>
+                <td>2–5 arkipäivää</td>
+                <td>6,90 €</td>
+              </tr>
+              <tr>
+                <td><strong>Kotiinkuljetus (Kiireellinen)</strong></td>
+                <td>Nopeutettu kuljetus, toimitusajasta riippuen.</td>
+                <td>1–2 arkipäivää</td>
+                <td>9,90 €</td>
+              </tr>
+              <tr>
+                <td><strong>Myymälän nouto</strong></td>
+                <td>Ilmainen nouto liikkeestämme (Saat ilmoituksen sähköpostiisi tai tekstiviestillä, kun tilaus on valmis noudettavaksi).</td>
+                <td>1–2 arkipäivää</td>
+                <td>0,00 €</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+
+      </div>
+    </section>
+
+    <!-- Seuranta -->
+    <section class="mb-4">
+      <div class="card p-4 shadow-sm">
+        <h2 class="h5">Seuranta</h2>
+        <p class="muted">
+          Kun paketti lähtee varastolta, saat automaattisen seurantailmoituksen sähköpostitse ja/tai tekstiviestillä (jos puhelinnumero on annettu). Seurantatunnuksen avulla voit seurata lähetyksen etenemistä kuriirin omalla sivulla.
+        </p>
+        <p class="small-note mb-0">
+          Mikäli et saa seurantatietoja 24 tunnin kuluttua tilauksesta, ota yhteyttä asiakaspalveluumme.
+        </p>
+      </div>
+    </section>
+
+    <!-- Nouto myymälästä -->
+    <section class="mb-4">
+      <div class="card p-4 shadow-sm">
+        <h2 class="h5">Myymälän nouto</h2>
+        <p class="muted">
+          Tilauksen nouto myymälästä on täysin ilmaista. Saat sähköpostilla tai tekstiviestillä ilmoituksen, kun tilaus on valmis noudettavaksi. Ota mukaan tilausvahvistus ja henkilöllisyystodistus.
+        </p>
+        <ul>
+          <li>Noutoaika: Ma–Pe 10:00–16:00.</li>
+          <li>Tilauksen varaus: Säilytämme varatut tuotteet 14 päivää noutoa varten.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Palautus ja reklamaatiot -->
+    <section class="mb-4">
+      <div class="card p-4 shadow-sm">
+        <h2 class="h5">Palautus ja vahingot</h2>
+        <p class="muted">
+          Tarjoamme 14 päivän kuluttajasuojalain mukaisen palautusoikeuden (alk. tuotteen vastaanottopäivä). Tuotteen tulee olla käyttämätön ja alkuperäispakkauksessa.
+        </p>
+        <ul>
+          <li><strong>Palautuslähetys:</strong> Asiakas vastaa palautuksen lähetyskuluista ellei tuote ole virheellinen.</li>
+          <li><strong>Virheellinen tai vahingoittunut tuote:</strong> Ilmoita virheestä 7 päivän kuluessa; korvaamme tai vaihdamme tuotteen ja korvaamme toimituskulut.</li>
+          <li><strong>Rahat takaisin:</strong> Hyvitys palautuksen vastaanoton jälkeen 14 päivän sisällä. Käytämme samaa maksutapaa kuin tilauksessa, ellei toisin sovita.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Maksutavat -->
+    <section class="mb-4">
+      <div class="card p-4 shadow-sm">
+        <h2 class="h5">Maksutavat</h2>
+        <p class="muted mb-0">Hyväksymme mm. pankkikortit, Paytrail/Stripe, verkkopankkimaksun ja laskun (Clarify/Checkout - kumppanit). Maksut käsitellään turvallisesti.</p>
+      </div>
+    </section>
+
+    <!-- Usein kysytyt kysymykset -->
+    <section class="mb-4">
+      <div class="card p-4 shadow-sm">
+        <h2 class="h5">Usein kysytyt kysymykset (UKK)</h2>
+
+        <div class="faq mt-3" id="faq">
+          <div class="mb-2">
+            <button class="btn btn-light border rounded-3 p-3" data-bs-toggle="collapse" data-bs-target="#q1" aria-expanded="false">
+              Miksi tilaukseni viivästyy?
+            </button>
+            <div id="q1" class="collapse mt-2 small-note">
+              Viiveet voivat johtua varastotilanteesta, tuotteiden erikoistoimituksista (esim. tilauksesta tilattavat instrumentit) tai kuljetusketjun ruuhkautumisesta (esim. sesonkiaikoina). Ota yhteyttä, niin tarkistamme tilanteen.
+            </div>
+          </div>
+
+          <div class="mb-2">
+            <button class="btn btn-light border rounded-3 p-3" data-bs-toggle="collapse" data-bs-target="#q2" aria-expanded="false">
+              Mitä teen jos paketti on kadonnut?
+            </button>
+            <div id="q2" class="collapse mt-2 small-note">
+              Tarkista ensin saamasi seurantatiedot. Jos lähetys on merkitty toimitetuksi mutta et ole saanut pakettia, ota yhteys asiakaspalveluumme — autamme reklamaatiossa kuriirille.
+            </div>
+          </div>
+
+          <div class="mb-2">
+            <button class="btn btn-light border rounded-3 p-3" data-bs-toggle="collapse" data-bs-target="#q3" aria-expanded="false">
+              Voinko muuttaa toimitusosoitetta tilauksen jälkeen?
+            </button>
+            <div id="q3" class="collapse mt-2 small-note">
+              Yritämme muuttaa osoitetietoa ennen lähettämistä. Ota yhteyttä pikaisesti — jos paketti on jo lähetetty, osoitteen muutos voi olla mahdotonta tai kustannuksia voidaan periä.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Yhteystiedot -->
+    <section class="mb-5">
+      <div class="card p-4 shadow-sm">
+        <h2 class="h5">Yhteystiedot</h2>
+        <p class="mb-1">Asiakaspalvelu: <strong>asiakaspalvelu@riffhub.fi</strong></p>
+        <p class="mb-1">Puhelin: <strong>040 123 4567</strong> (ma–pe 10–16)</p>
+        <p class="small-note mb-0">Tarvitsetko apua tilauksen kanssa? Liitä mukaan tilausnumero ja ostajan nimi — vastaamme mahdollisimman pian.</p>
+      </div>
+    </section>
+
+
+  </main>
+
+<!-- ========================================================= -->
+<!-- KIRJAUTUMIS/REKISTERÖINTIMODAALI -->
+<!-- ========================================================= -->
+
+<div class="modal fade" id="loginModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 id="modalTitle">Kirjaudu sisään</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+
+        <!-- Kirjautumislomake -->
+        <form id="loginForm">
+          <label class="form-label">Käyttäjänimi</label>
+          <input type="text" id="usernameInput" class="form-control mb-3" required>
+
+          <label class="form-label">Salasana</label>
+          <input type="password" id="passwordInput" class="form-control mb-1" required>
+          <div class="form-check mb-3">
+            <input class="form-check-input" type="checkbox" value="" id="showPasswordLogin">
+            <label class="form-check-label" for="showPasswordLogin">
+              Näytä salasana
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-primary w-100 mb-2">Kirjaudu</button>
+        </form>
+
+        <!-- Rekisteröintilomake -->
+        <form id="registerForm" class="d-none">
+          <label class="form-label">Uusi käyttäjänimi</label>
+          <input type="text" id="regUsernameInput" class="form-control mb-3" required>
+
+          <label class="form-label">Salasana</label>
+          <input type="password" id="regPasswordInput" class="form-control mb-1" required>
+          <div class="form-check mb-3">
+            <input class="form-check-input" type="checkbox" value="" id="showPasswordRegister">
+            <label class="form-check-label" for="showPasswordRegister">
+              Näytä salasana
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-success w-100 mb-2">Rekisteröidy</button>
+        </form>
+
+        <div class="text-center mt-2">
+          <a href="#" id="toggleAuth">Ei tiliä? Rekisteröidy</a>
+        </div>
+
+        <!-- Uloskirjautuminen -->
+        <div id="logoutSection" class="d-none mt-3">
+          <p>Kirjautunut: <strong id="loggedUser"></strong></p>
+          <button id="logoutBtn" class="btn btn-danger w-100">Kirjaudu ulos</button>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  <footer class="bg-light py-4 mt-5">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="small text-muted">© RiffHub 2025</div>
+      <div><a href="#" class="text-decoration-none me-3">Tietosuojaseloste</a><a href="#" class="text-decoration-none">Yhteystiedot</a></div>
+    </div>
+  </footer>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  
+  <script src="script.js"></script>
 </body>
 </html>
