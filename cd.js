@@ -1,12 +1,16 @@
     const tuotteet = [
-      { id: 65, name: "", price: 766.00, img: "kuvat/.png" },
-      { id: 66, name: "", price: 499.00, img: "kuvat/.png" },
-      { id: 67, name: "", price: 399.00, img: "kuvat/.png" },
-      { id: 68, name: "", price: 499.00, img: "kuvat/.png" },
-      { id: 69, name: "", price: 1499.00, img: "kuvat/.png" },
-      { id: 70, name: "", price: 815.00, img: "kuvat/.png"},
-      { id: 71, name: "", price: 1111.00, img: "kuvat/.png"},
-      { id: 72, name: "", price: 5990.00, img: "kuvat/.png"},
+      { id: 65, name: "Helloween - Giants & Monsters CD-levy", price: 21.99, img: "kuvat/Helloween_cd-Photoroom.png" },
+      { id: 66, name: "Statovarius - Visions CD-levy", price: 24.99, img: "kuvat/stratovarius_cd-Photoroom.png" },
+      { id: 67, name: "Avenged Sevenfold - Nightmare CD-levy", price: 12.90, img: "kuvat/nightmare.webp" },
+      { id: 68, name: "Motionless In White - Scoring The End Of The World CD-levy", price: 50.99, img: "kuvat/miw_cd-Photoroom.png" },
+      { id: 69, name: "Mokoma - Tämän Maailman Ruhtinaan Hovi CD-levy", price: 11.99, img: "kuvat/mokoma_cd-Photoroom.png" },
+      { id: 70, name: "Scorpions - Blackout CD-levy", price: 25.90, img: "kuvat/scorpions_cd-Photoroom.png"},
+      { id: 71, name: "Citizen Soldier - This is Your Sign Part 1 CD-levy", price: 20.99, img: "kuvat/sign1_cd-Photoroom.png"},
+      { id: 72, name: "Citizen Soldier - This is Your Sign Part 2 CD-levyCD-levy", price: 20.00, img: "kuvat/sign2_cd-Photoroom.png"},
+      { id: 73, name: "Citizen Soldier - Relentless CD-levy", price: 20.00, img: "kuvat/relentless_cd-Photoroom.png"},
+      { id: 74, name: "Citizen Soldier - Down The Rabbit Hole CD-levy", price: 20.00, img: "kuvat/rabbithole_cd-Photoroom.png"},
+      { id: 75, name: "Citizen Soldier - Scarecrow CD-levy", price: 20.00, img: "kuvat/scarecrow_cd-Photoroom.png"},
+      { id: 76, name: "Citizen Soldier - ICU CD-levy", price: 20.00, img: "kuvat/ICU_cd-Photoroom.png"},
     ];
 
 
