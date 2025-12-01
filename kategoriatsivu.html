@@ -114,6 +114,71 @@
     </div>
   </footer>
 
+<!-- ========================================================= -->
+<!-- KIRJAUTUMIS/REKISTERÖINTIMODAALI -->
+<!-- ========================================================= -->
+
+<div class="modal fade" id="loginModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 id="modalTitle">Kirjaudu sisään</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+
+        <!-- Kirjautumislomake -->
+        <form id="loginForm">
+          <label class="form-label">Käyttäjänimi</label>
+          <input type="text" id="usernameInput" class="form-control mb-3" required>
+
+          <label class="form-label">Salasana</label>
+          <input type="password" id="passwordInput" class="form-control mb-1" required>
+          <div class="form-check mb-3">
+            <input class="form-check-input" type="checkbox" value="" id="showPasswordLogin">
+            <label class="form-check-label" for="showPasswordLogin">
+              Näytä salasana
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-primary w-100 mb-2">Kirjaudu</button>
+        </form>
+
+        <!-- Rekisteröintilomake -->
+        <form id="registerForm" class="d-none">
+          <label class="form-label">Uusi käyttäjänimi</label>
+          <input type="text" id="regUsernameInput" class="form-control mb-3" required>
+
+          <label class="form-label">Salasana</label>
+          <input type="password" id="regPasswordInput" class="form-control mb-1" required>
+          <div class="form-check mb-3">
+            <input class="form-check-input" type="checkbox" value="" id="showPasswordRegister">
+            <label class="form-check-label" for="showPasswordRegister">
+              Näytä salasana
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-success w-100 mb-2">Rekisteröidy</button>
+        </form>
+
+        <div class="text-center mt-2">
+          <a href="#" id="toggleAuth">Ei tiliä? Rekisteröidy</a>
+        </div>
+
+        <!-- Uloskirjautuminen -->
+        <div id="logoutSection" class="d-none mt-3">
+          <p>Kirjautunut: <strong id="loggedUser"></strong></p>
+          <button id="logoutBtn" class="btn btn-danger w-100">Kirjaudu ulos</button>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="script.js"></script>
 </body>
