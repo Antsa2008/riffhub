@@ -5,8 +5,8 @@
       { id: 60, name: "Palaye Royale - The Bastards vinyylilevy", price: 28.00, img: "kuvat/TB_vinyl-Photoroom.png" },
       { id: 61, name: "Palaye Royale - Death Or Glory vinyylilevy", price: 28.00, img: "kuvat/DOG_vinyl-Photoroom.png" },
       { id: 62, name: "Iron Maiden - Fear Of The Dark vinyylilevy", price: 35.99, img: "kuvat/FOD_vinyl-Photoroom.png"},
-      { id: 63, name: "vinyylilevy", price: 1111.00, img: "kuvat/.png"},
-      { id: 64, name: "vinyylilevy", price: 5990.00, img: "kuvat/.png"},
+      { id: 63, name: "Megadeth - Peace Sells But Who Is Buying vinyylilevy", price: 20.99, img: "kuvat/peacesells_vinyl-Photoroom.png"},
+      { id: 64, name: "Judas Priest - Painkiller vinyylilevy", price: 26.99, img: "kuvat/painkiller_vinyl-Photoroom.png"},
     ];
 
 
