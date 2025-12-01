@@ -170,3 +170,9 @@ h1  {
 /* SEARCH BAR */
 
 
+.tietosuojaseloste {
+  background-color: rgb(138, 0, 25);
+  margin: 20px;
+  padding: 50px;
+  border-radius: 20px;
+}
