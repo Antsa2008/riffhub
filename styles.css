@@ -35,11 +35,16 @@ section .h2 {
 /* --- Kategoriakortit ilman vilkkumista --- */
 .card {
   background: #111;
+  color: aliceblue;
   border: 1px solid #0ff;
   border-radius: 12px;
   padding: 20px;
   transition: 0.3s;
   box-shadow: 0 0 12px rgba(0, 255, 255, 0.5); /* Tasainen neon-hohde */
+}
+
+.card .p .text-muted{
+  color: aliceblue;
 }
 
 .card img {
@@ -248,15 +253,6 @@ section .h2 {
 
 .btn:hover {
   background-color: rgb(156, 12, 41);
-}
-
-.product1 img {
-    width: 1000px;
-    height: auto;
-}
-
-.product1 {
-    border: 100px;
 }
 
 /* Sivupalkki (offcanvas) tumma teema */
