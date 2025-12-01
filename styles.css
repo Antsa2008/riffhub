@@ -2,13 +2,81 @@ body {
     background-color: rgb(53, 53, 53);
 }
 
+.kategoriat_katso_kaikki {
+  background-color: rgb(138, 0, 25);
+  color: aliceblue;
+  border-radius: 20px;
+  padding: 10px;
+  text-decoration: none;
+}
+
 h1  {
     color: aliceblue;
 }
 
-.h2 {
-    color: aliceblue;
+/* --- Kategoriat otsikko + linkki --- */
+section .h2 {
+  color: #fff;
+  text-shadow: 0 0 10px #0ff;
 }
+
+.kategoriat_katso_kaikki {
+  color: #fff;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.kategoriat_katso_kaikki:hover {
+  text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+  color: #0ff;
+}
+
+
+/* --- Kategoriakortit neon glow --- */
+.card {
+  background: #111;
+  border: 1px solid #0ff;
+  border-radius: 12px;
+  padding: 20px;
+  transition: 0.3s;
+  animation: categoryGlow 2s infinite alternate;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.4);
+}
+
+.card img {
+  filter: drop-shadow(0 0 6px #0ff);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px #0ff, 0 0 40px rgba(0, 255, 255, 0.6);
+}
+
+.card:hover img {
+  filter: drop-shadow(0 0 12px #0ff);
+}
+
+.card .fw-semibold {
+  color: #fff;
+  text-shadow: 0 0 6px #0ff;
+  transition: 0.3s;
+}
+
+.card:hover .fw-semibold {
+  text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+}
+
+/* --- Animointi --- */
+@keyframes categoryGlow {
+  from {
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.4);
+  }
+  to {
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.9);
+  }
+}
+
 
 .btn-secondary{
     display: inline-block;
@@ -42,9 +110,53 @@ h1  {
     margin-bottom: 100px;
 }
 
+/* Neon glow navbar */
 .navbar {
-    background-color: rgb(138, 0, 25);
+  background: #111 !important;
+  border-radius: 12px;
+  padding: 12px 20px;
+  animation: navbarGlow 2s infinite alternate;
+  box-shadow: 0 0 12px rgba(255, 0, 0, 0.6);
 }
+
+@keyframes navbarGlow {
+  from {
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.6),
+                0 0 20px rgba(255, 0, 0, 0.6);
+  }
+  to {
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.6),
+                0 0 45px rgba(255, 0, 0, 0.6);
+  }
+}
+
+/* Linkkien neon hover */
+.navbar a.nav-link,
+.navbar-brand {
+  color: #fff !important;
+  transition: 0.3s;
+}
+
+.navbar a:hover,
+.navbar-brand:hover {
+  color: rgba(255, 0, 0, 0.6) !important;
+  text-shadow: 0 0 8px rgba(255, 0, 0, 0.6), 0 0 18px rgba(255, 0, 0, 0.6);
+}
+
+/* Hakukenttä neon outline */
+#searchInput:focus {
+  box-shadow: 0 0 12px rgba(255, 0, 0, 0.6) !important;
+  border-color: rgba(255, 0, 0, 0.6) !important;
+}
+
+/* Profiili- ja ostoskori painikkeiden hover glow */
+#cartBtn:hover,
+#userBtn:hover {
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
+  color: rgba(255, 0, 0, 0.6);
+  border-color: rgba(255, 0, 0, 0.6) !important;
+}
+
 
 .navbar img{
     width: 100px;
@@ -55,7 +167,7 @@ h1  {
 }
 
 .col-lg-7 {
-    background-color:  rgb(138, 0, 25);
+    background-color:  #111;
     color: aliceblue;
     border-radius: 10px;
 }
