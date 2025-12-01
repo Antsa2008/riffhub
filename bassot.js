@@ -1,12 +1,12 @@
     const tuotteet = [
-      { id: 49, name: "Spector NS Dimension MS 4 Inferno Red", price: 1299.00, img: "kuvat/spector-ns-dimension-ms-4-inferno-red-gloss.png" },
-      { id: 50, name: "Fender Squier Badtz-Maru Bronco Bass", price: 499.00, img: "kuvat/badtz_maru_bass.png" },
-      { id: 51, name: "Jackson David Ellefson CBX IV SBK", price: 599.00, img: "kuvat/Jackson_David_Ellefson.png" },
-      { id: 52, name: "Schecter Johnny Christ Bass 5 SB", price: 1399.00, img: "kuvat/Schecter_Johnny_Christ_Bass.png" },
-      { id: 53, name: "Ibanez SR300EB-WK", price: 1499.00, img: "kuvat/Ibanez SR300EB-WK.png" },
-      { id: 54, name: "Fender Vintera II 60s J-Bass BK", price: 1029.00, img: "kuvat/Fender_Vintera_II_60s.png"},
-      { id: 55, name: "Spector Legend Standard 4 BCG", price: 499.00, img: "kuvat/Spector_Legend_Standard_4_BCG.png"},
-      { id: 56, name: "ESP LTD FL-4 Black Red Burst Satin", price: 2222.00, img: "kuvat/ESP_LTD_FL-4_Black_Red_Burst_Satin.png"},
+      { id: 49, name: "Spector NS Dimension MS 4 Inferno Red", price: 1299.00, img: "kuvat/spector-ns-dimension-ms-4-inferno-red-gloss-Photoroom.png" },
+      { id: 50, name: "Fender Squier Badtz-Maru Bronco Bass", price: 499.00, img: "kuvat/badtz_maru_bass-Photoroom.png" },
+      { id: 51, name: "Jackson David Ellefson CBX IV SBK", price: 599.00, img: "kuvat/Jackson_David_Ellefson-Photoroom.png" },
+      { id: 52, name: "Schecter Johnny Christ Bass 5 SB", price: 1399.00, img: "kuvat/Schecter_Johnny_Christ_Bass-Photoroom.png" },
+      { id: 53, name: "Ibanez SR300EB-WK", price: 1499.00, img: "kuvat/Ibanez SR300EB-WK-Photoroom.png" },
+      { id: 54, name: "Fender Vintera II 60s J-Bass BK", price: 1029.00, img: "kuvat/Fender_Vintera_II_60s-Photoroom.png"},
+      { id: 55, name: "Spector Legend Standard 4 BCG", price: 499.00, img: "kuvat/Spector_Legend_Standard_4_BCG-Photoroom.png"},
+      { id: 56, name: "ESP LTD FL-4 Black Red Burst Satin", price: 2222.00, img: "kuvat/ESP_LTD_FL-4_Black_Red_Burst_Satin-Photoroom.png"},
     ];
 
 

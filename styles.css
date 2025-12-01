@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(53, 53, 53);
+    background-color: rgb(34, 34, 34);
 }
 
 .kategoriat_katso_kaikki {
@@ -14,14 +14,14 @@ h1  {
     color: aliceblue;
 }
 
-/* --- Kategoriat otsikko + linkki --- */
+/* --- Otsikko + "Katso kaikki" linkki --- */
 section .h2 {
   color: #fff;
   text-shadow: 0 0 10px #0ff;
 }
 
 .kategoriat_katso_kaikki {
-  color: #fff;
+  color: #0ff;
   font-weight: 600;
   transition: 0.3s;
 }
@@ -32,16 +32,41 @@ section .h2 {
 }
 
 
-/* --- Kategoriakortit neon glow --- */
+/* --- Kategoriakortit ilman vilkkumista --- */
 .card {
   background: #111;
   border: 1px solid #0ff;
   border-radius: 12px;
   padding: 20px;
   transition: 0.3s;
-  animation: categoryGlow 2s infinite alternate;
-  box-shadow: 0 0 10px rgba(0, 255, 255, 0.4);
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.5); /* Tasainen neon-hohde */
 }
+
+.card img {
+  filter: drop-shadow(0 0 6px #0ff);
+  transition: 0.3s;
+}
+
+.card:hover {
+  filter: drop-shadow(0 0 6px #0ff);
+  transform: translateY(-5px);
+  box-shadow: 0 0 22px #0ff, 0 0 45px rgba(0, 255, 255, 0.8); /* Kirkkaampi hover */
+}
+
+.card:hover img {
+  filter: drop-shadow(0 0 12px #0ff);
+}
+
+.card .fw-semibold {
+  color: #fff;
+  text-shadow: 0 0 6px #0ff;
+  transition: 0.3s;
+}
+
+.card:hover .fw-semibold {
+  text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+}
+
 
 .card img {
   filter: drop-shadow(0 0 6px #0ff);
@@ -288,4 +313,11 @@ section .h2 {
   margin: 20px;
   padding: 50px;
   border-radius: 20px;
+}
+
+footer {
+  background-color: #111;
+  color: rgb(138, 0, 25);
+  text-decoration: none;
+  padding: 40px;
 }

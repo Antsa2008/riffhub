@@ -1,6 +1,6 @@
     const tuotteet = [
       { id: 41, name: "Tama Imperialstar 22'' 5pc Drum Kit, Blacked Out Black", price: 954.00, img: "kuvat/Tama_drums-Photoroom.png" },
-      { id: 42, name: "Millenium MX422 Standard Set RL", price: 458.00, img: "kuvat/Millenium_MX422.png" },
+      { id: 42, name: "Millenium MX422 Standard Set RL", price: 458.00, img: "kuvat/Millenium_MX422-Photoroom.png" },
       { id: 43, name: "Yamaha Rydeen Studio Black Glitter", price: 855.00, img: "kuvat/Yamaha_Rydeen_Studio_Black_Glitter.png" },
       { id: 44, name: "Yamaha Stage Custom 22'' 5 Piece Shell Pack w/ Hardware, Cranberry Red", price: 1238.00, img: "kuvat/Yamaha_Stage_Custom.png" },
       { id: 45, name: "Yamaha Rydeen Studio Mellow Yellow", price: 855.00, img: "kuvat/Yamaha_Rydeen_Studio_yellow.png" },
