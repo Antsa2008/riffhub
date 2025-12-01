@@ -31,7 +31,6 @@ section .h2 {
   color: #0ff;
 }
 
-
 /* --- Kategoriakortit ilman vilkkumista --- */
 .card {
   background: #111;
@@ -219,6 +218,11 @@ section .h2 {
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
+.card .text-muted {
+  color: aliceblue !important;
+}
+
+
 .card img {
   height: 400px;       /* Voit muuttaa korkeutta */
   object-fit: contain; /* Estää kuvan venymisen */
@@ -316,4 +320,40 @@ footer {
   color: rgb(138, 0, 25);
   text-decoration: none;
   padding: 40px;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+/* Musta overlay peittää koko sivun */
+#pageTransition {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  z-index: 999999;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.6s ease-in-out;
+}
+
+/* Overlay näkyvä */
+#pageTransition.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Uuden sivun fade-in */
+body.fade-in {
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+}
+
+body.fade-in.show {
+  opacity: 2;
 }
