@@ -6,7 +6,7 @@
       { id: 5, name: "Ltd Snakebyte JH", price: 1499.00, img: "kuvat/Snakebyte.png" },
       { id: 6, name: "Kramer Guitars Dave Mustaine Vanguard SM", price: 815.00, img: "kuvat/kramer_DM.png"},
       { id: 7, name: "Schecter Synyster Gates Standard Gloss", price: 1111.00, img: "kuvat/Synester.png"},
-      { id: 8, name: "Schecter Synyster Gates Standard Gloss", price: 5990.00, img: "kuvat/gb_custom_flyingV.png"},
+      { id: 8, name: "Gibson Flying V Custom EB", price: 5990.00, img: "kuvat/gb_custom_flyingV.png"},
     ];
 
 
