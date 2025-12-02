@@ -39,11 +39,11 @@ section .h2 {
 .card {
   background: #111;
   color: aliceblue;
-  border: 1px solid #0ff;
+  border: 1px solid rgb(219, 0, 40);
   border-radius: 12px;
   padding: 20px;
   transition: 0.3s;
-  box-shadow: 0 0 12px rgba(0, 255, 255, 0.5); /* Tasainen neon-hohde */
+  box-shadow: 0 0 12px rgb(219, 0, 40); /* Tasainen neon-hohde */
 }
 
 .card .p .text-muted{
@@ -51,62 +51,62 @@ section .h2 {
 }
 
 .card img {
-  filter: drop-shadow(0 0 6px #0ff);
+  filter: drop-shadow(0 0 6px rgb(219, 0, 40));
   transition: 0.3s;
 }
 
 .card:hover {
-  filter: drop-shadow(0 0 6px #0ff);
+  filter: drop-shadow(0 0 6px rgb(219, 0, 40));
   transform: translateY(-5px);
-  box-shadow: 0 0 22px #0ff, 0 0 45px rgba(0, 255, 255, 0.8); /* Kirkkaampi hover */
+  box-shadow: 0 0 22px rgb(219, 0, 40), 0 0 45px rgb(219, 0, 40); /* Kirkkaampi hover */
 }
 
 .card:hover img {
-  filter: drop-shadow(0 0 12px #0ff);
+  filter: drop-shadow(0 0 12px rgb(219, 0, 40));
 }
 
 .card .fw-semibold {
   color: #fff;
-  text-shadow: 0 0 6px #0ff;
+  text-shadow: 0 0 6px rgb(219, 0, 40);
   transition: 0.3s;
 }
 
 .card:hover .fw-semibold {
-  text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+  text-shadow: 0 0 10px rgb(219, 0, 40), 0 0 20px rgb(219, 0, 40);
 }
 
 
 .card img {
-  filter: drop-shadow(0 0 6px #0ff);
+  filter: drop-shadow(0 0 6px rgb(219, 0, 40));
   transition: 0.3s;
 }
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 20px #0ff, 0 0 40px rgba(0, 255, 255, 0.6);
+  box-shadow: 0 0 20px rgb(219, 0, 40), 0 0 40px rgb(219, 0, 40);
 }
 
 .card:hover img {
-  filter: drop-shadow(0 0 12px #0ff);
+  filter: drop-shadow(0 0 12px rgb(219, 0, 40));
 }
 
 .card .fw-semibold {
   color: #fff;
-  text-shadow: 0 0 6px #0ff;
+  text-shadow: 0 0 6px rgb(219, 0, 40);
   transition: 0.3s;
 }
 
 .card:hover .fw-semibold {
-  text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+  text-shadow: 0 0 10px rgb(219, 0, 40), 0 0 20px rgb(219, 0, 40);
 }
 
 /* --- Animointi --- */
 @keyframes categoryGlow {
   from {
-    box-shadow: 0 0 10px rgba(0, 255, 255, 0.4);
+    box-shadow: 0 0 10px rgb(219, 0, 40);
   }
   to {
-    box-shadow: 0 0 25px rgba(0, 255, 255, 0.9);
+    box-shadow: 0 0 25px rgb(219, 0, 40);
   }
 }
 
