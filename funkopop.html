@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -11,15 +11,19 @@
 </head>
 <body>
 
+<div id="pageTransition"></div>
+
+
+
 <!--Nav bar-->
-<nav class="navbar navbar-expand-lg navbar-light bg-rgb(156, 12, 41) shadow-sm">
+<nav class="navbar navbar-expand-lg navbar-light shadow-sm">
   <div class="container">
 
     <!-- SIVUPALKIN NAPPI -->
     <button class="btn btn-dark me-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#sideMenu">
       ☰
     </button>
-
+    <!-- LOGO -->
     <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
       <img src="kuvat/riffhub-high-resolution-logo.png" alt="RiffHub" class="me-2 rounded-circle">
       RiffHub
@@ -29,10 +33,15 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
+    <!-- SEARCH BAR -->
+
     <div class="collapse navbar-collapse" id="navMain">
       <form class="d-flex ms-auto me-3" role="search" onsubmit="return false;">
         <input id="searchInput" class="form-control me-2" type="search" placeholder="Etsi tuotteita" aria-label="Haku">
       </form>
+
+
+      <!-- OSTOSKORI -->
 
       <ul class="navbar-nav align-items-lg-center">
         <li class="nav-item">
@@ -45,6 +54,8 @@
         </li>
       </ul>
 
+      <!--  PROFIILIKUVA jota klikkaamalla aukeaa kirjautuis/rekisteröitymis modalin -->
+
 <li class="nav-item ms-3">
   <button id="userBtn" class="btn btn-outline-dark rounded-circle p-1">
     <img src="kuvat/default_pfp.png" width="10" height="100" alt="Käyttäjäprofiili">
@@ -54,7 +65,7 @@
     </div>
   </div>
 </nav>
-
+      <!--Sivupalkin/valikon "oikopolut" eri sivuille-->
 <div class="offcanvas offcanvas-start" tabindex="-1" id="sideMenu">
   <div class="offcanvas-header">
     <h5 class="offcanvas-title">Valikko</h5>
@@ -76,20 +87,20 @@
     <h6 class="text-muted">Tilisi & Tuki</h6>
     <ul class="list-unstyled">
       <li><a href="cart.html" class="d-block py-2">🛒 Ostoskori</a></li>
-      <li><a href="#" class="d-block py-2">📦 Toimitustiedot</a></li>
-      <li><a href="#" class="d-block py-2">📞 Asiakaspalvelu</a></li>
+      <li><a href="toimitustiedot.html" class="d-block py-2">📦 Toimitustiedot</a></li>
+      <li><a href="asiakaspalvelu.html" class="d-block py-2">📞 Asiakaspalvelu</a></li>
     </ul>
 
   </div>
 </div>
-
-
+    
 <main class="container my-5">
     <h1 class="mb-4 text-center">Funko Pop! - keräilyfiguurit</h1>
     <div id="productLista" class="row g-4"></div>
 </main>
 
-  <footer class="footer">
+
+<footer class="footer">
     <div class="container d-flex justify-content-between align-items-center">
       <div class="Copyrights">© RiffHub 2025</div>
 
@@ -122,7 +133,7 @@
     </div>
   </div>
 </div>
-  
+
 <!-- ========================================================= -->
 <!-- KIRJAUTUMIS/REKISTERÖINTIMODAALI -->
 <!-- ========================================================= -->
@@ -188,8 +199,8 @@
   </div>
 </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="funkopop.js"></script>
-    <script src="sivunvihados.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="funkopop.js"></script>
+<script src="sivunvihados.js"></script>
 </body>
 </html>
