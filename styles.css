@@ -2,6 +2,10 @@ body {
     background-color: rgb(34, 34, 34);
 }
 
+.valikko_teksti {
+  color: rgb(219, 0, 40);
+}
+
 .kategoriat_katso_kaikki {
   background-color: rgb(138, 0, 25);
   color: aliceblue;
@@ -21,17 +25,17 @@ section .h2 {
 }
 
 .kategoriat_katso_kaikki {
-  color: #0ff;
+  color: #fff;
   font-weight: 600;
   transition: 0.3s;
 }
 
 .kategoriat_katso_kaikki:hover {
-  text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
-  color: #0ff;
+  text-shadow: 0 0 10px rgb(255, 0, 0), 0 0 20px rgb(255, 0, 0);
+  color: rgb(255, 255, 255);
 }
 
-/* --- Kategoriakortit ilman vilkkumista --- */
+/* --- Kategoriakortit --- */
 .card {
   background: #111;
   color: aliceblue;
